@@ -1,38 +1,29 @@
 export default function About() {
   return (
-    <section id="about" className="flex flex-col min-h-screen space-y-12 p-12 max-w-lg mx-auto"
+    <section id="about" className="flex flex-col min-h-screen space-y-12 p-12 mx-auto"
     >
-        <p>
-        I’ve always been drawn to the number nine.
-        </p>
+    <p>I’ve always been drawn to the number nine.</p>
 
-        <p>
-        As a child, I heard the old myth that cats don’t just have one life, but nine. 
-        </p>
-      
-        <p>
-        Each one a chance to begin again, survive, and evolve. 
-        </p>
-        
-        <p>
-        That idea stayed with me. A reminder that we are never fixed to one version of ourselves. 
-        </p>
+    <p>
+      As a child, I heard the old myth that cats don’t just have one life, but nine.
+      Each one a chance to begin again, survive, and evolve. That idea stayed with me.
+      A quiet reminder that we are never limited to one version of ourselves.
+    </p>
 
-        <p>
-        Over the years, my life has taken many turns—different jobs, different identities, different versions of me.
-        </p>
-        
-        <p>
-        I finally found my sense of belonging in this world. 
-        </p>
-        
-        <p>
-        Sharing my love of yoga feels like a cross section between my past lives. 
-        </p>
-        
-        <p>
-        And ninth life yoga was born.  
-        </p>
+    <p>
+      My own life has moved through many seasons. 
+      Different identities, different ambitions, different versions of myself.
+      Through all of it, yoga was the constant. 
+      When I practice, I feel connected not just to who I was becoming, but to every version of myself that had come before.
+    </p>
+    
+    <p>
+      I share my yoga journey because I want others to feel what I’ve found through this practice: a sense of grounding, clarity, and coming back home to yourself.
+    </p>
+  
+    <p>
+      That’s how Ninth Life Yoga was born.
+    </p>
     </section>
   );
 }

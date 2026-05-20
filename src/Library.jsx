@@ -1,43 +1,127 @@
+"use client";
+
+import { useState } from "react";
+
 const videos = [
   {
-    title: "Morning Reset",
+    title: "Tutorial #1",
+    duration: "23 min",
+    category: "Grounding",
+    chakra: "Root Chakra",
+  },
+  {
+    title: "Tutorial #2",
     duration: "20 min",
+    category: "Creativity",
+    chakra: "Sacral Chakra",
   },
   {
-    title: "Core + Breath",
-    duration: "18 min",
-  },
-  {
-    title: "Slow Evening Flow",
+    title: "Tutorial #3",
     duration: "22 min",
+    category: "Confidence",
+    chakra: "Solar Plexus",
   },
   {
-    title: "Spinal Mobility",
-    duration: "15 min",
-  },
-  {
-    title: "Grounding Practice",
+    title: "Tutorial #4",
     duration: "21 min",
+    category: "Self Love",
+    chakra: "Heart Chakra",
+  },
+  {
+    title: "Tutorial #5",
+    duration: "22 min",
+    category: "Expression",
+    chakra: "Throat Chakra",
   },
 ];
 
+const filters = [
+  "All",
+  "Grounding",
+  "Creativity",
+  "Confidence",
+  "Self Love",
+  "Expression",
+  "Clarity",
+  "Inner Peace",
+];
+
 export default function Library() {
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const filteredVideos =
+    activeFilter === "All"
+      ? videos
+      : videos.filter((video) => video.category === activeFilter);
+
   return (
     <section
       id="library"
-      className="flex flex-col min-h-screen w-full max-w-lg mx-auto p-12"
+      className="flex flex-col min-h-screen w-full space-y-12"
     >
-      <div className="flex flex-col space-y-12 text-xs">
-        {videos.map((video, i) => (
+      <div className="mb-6 space-y-3">
+        <h2 className="text-2xl font-light leading-tight">
+          Library
+        </h2>
+        <p className="text-black/30">Explore flows aligned with different chakras,
+          emotions, and intentions.</p>
+      </div>
+
+      <div className="flex flex-wrap gap-4 pb-20">
+        {filters.map((filter) => (
+          <button
+            key={filter}
+            onClick={() => setActiveFilter(filter)}
+            className={`
+              group relative overflow-hidden rounded-[2rem]
+              px-8 py-10 min-w-[160px]
+              flex items-end justify-start text-left
+              transition-all duration-500 border
+              ${
+                activeFilter === filter
+                  ? "bg-black text-white border-black"
+                  : "border-black/10 hover:border-black/30 hover:bg-black/[0.02]"
+              }
+            `}
+          >
+            <h3 className="text-lg font-light leading-none">
+              {filter}
+            </h3>
+
+            <div
+              className={`
+                absolute inset-0 opacity-0 blur-3xl transition-opacity duration-500
+                group-hover:opacity-100
+                ${
+                  activeFilter === filter
+                    ? "bg-white/10"
+                    : "bg-black/5"
+                }
+              `}
+            />
+          </button>
+        ))}
+      </div>
+
+      <div className="flex flex-col space-y-10">
+        {filteredVideos.map((video, i) => (
           <div
             key={i}
-            className="flex justify-between items-baseline border-b border-black/10 pb-4"
+            className="flex items-end justify-between border-b border-black/10 pb-5"
           >
-            <p className="">
-              {video.title}
-            </p>
+            <div className="space-y-2">
+              <h3 className="text-lg font-light">
+                {video.title}
+              </h3>
 
-            <p className="opacity-30">
+              <div className="flex gap-3 text-xs text-black/40">
+                <p>{video.category}</p>
+                <span>•</span>
+                <p>{video.chakra}</p>
+              </div>
+            </div>
+
+            <p className="text-xs text-black/30">
               {video.duration}
             </p>
           </div>

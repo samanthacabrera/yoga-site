@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="w-screen min-h-[25vh] flex items-end p-12">
-      <div className="w-full max-w-8xl mx-auto flex flex-col md:flex-row md:justify-between">
+    <footer className=" w-full min-h-[25vh] flex items-end py-12">
+      <div className="w-full mx-auto flex flex-col md:flex-row md:justify-between">
 
         <div className="hidden md:flex">
           ninth life yoga
