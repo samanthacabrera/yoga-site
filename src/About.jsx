@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="flex flex-col min-h-screen space-y-12 p-12 mx-auto"
+    <section id="about" className="flex flex-col min-h-screen space-y-12 py-12 mx-auto"
     >
     <p>I’ve always been drawn to the number nine.</p>
 
@@ -22,7 +22,7 @@ export default function About() {
     </p>
   
     <p>
-      That’s how Ninth Life Yoga was born.
+      That’s how <span className="italic">ninth life yoga</span> was born.
     </p>
     </section>
   );

@@ -103,27 +103,54 @@ export default function Library() {
         ))}
       </div>
 
-      <div className="flex flex-col space-y-10">
-        {filteredVideos.map((video, i) => (
+      <div className="flex flex-col space-y-2">
+  {filteredVideos.map((video, i) => (
           <div
             key={i}
-            className="flex items-end justify-between border-b border-black/10 pb-5"
+            className="
+              group relative border-b border-black/10 pb-6 pt-6 cursor-pointer
+            "
           >
-            <div className="space-y-2">
-              <h3 className="text-lg font-light">
+            {/* Row */}
+            <div className="flex items-center justify-between">
+              {/* Title */}
+              <h3 className="text-lg font-light transition-all duration-500 group-hover:tracking-wide">
                 {video.title}
               </h3>
 
+              {/* subtle hint */}
+              <span className="text-xs text-black/20 group-hover:opacity-0 transition-opacity duration-300">
+                view
+              </span>
+            </div>
+
+            {/* Hidden details (reveal on hover) */}
+            <div
+              className="
+                mt-3 flex items-center justify-between
+                opacity-0 translate-y-2 blur-sm
+                transition-all duration-500
+                group-hover:opacity-100 group-hover:translate-y-0 group-hover:blur-0
+              "
+            >
               <div className="flex gap-3 text-xs text-black/40">
                 <p>{video.category}</p>
                 <span>•</span>
                 <p>{video.chakra}</p>
               </div>
+
+              <p className="text-xs text-black/30">
+                {video.duration}
+              </p>
             </div>
 
-            <p className="text-xs text-black/30">
-              {video.duration}
-            </p>
+            {/* soft glow hover effect */}
+            <div
+              className="
+                absolute inset-0 opacity-0 group-hover:opacity-100
+                bg-black/[0.02] transition-opacity duration-500
+              "
+            />
           </div>
         ))}
       </div>

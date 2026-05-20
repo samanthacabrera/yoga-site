@@ -4,18 +4,13 @@ export default function Header() {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
-
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY && currentScrollY > 80) {
         setVisible(false);
-      } 
-      else {
+      } else {
         setVisible(true);
       }
 
@@ -29,14 +24,16 @@ export default function Header() {
   return (
     <header
       className={`
-        fixed top-0 left-0 w-full
-        flex p-4 md:p-6
-        transition-transform duration-300
-        ${visible ? "translate-y-0" : "-translate-y-full"}
+        fixed top-0 left-0 w-full z-50
+        flex justify-center
+        transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
+        ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 -translate-y-6 blur-sm"}
       `}
     >
-      <div className="text-sm md:text-base tracking-wide">
-        ninth life yoga
+      <div className="mt-6 md:mt-10 px-10 md:px-14 py-6 md:py-8">
+        <h1 className="text-[#2c1e11] font-light text-lg md:text-2xl tracking-[0.55em] uppercase">
+          ninth life yoga
+        </h1>
       </div>
     </header>
   );
