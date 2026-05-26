@@ -1,29 +1,53 @@
-export default function About() {
+function About() {
   return (
-    <section id="about" className="flex flex-col min-h-screen space-y-12 py-12 mx-auto"
-    >
-    <p>I’ve always been drawn to the number nine.</p>
+    <section className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div className="lg:col-span-7">
+        <p className="uppercase text-xs tracking-[0.3em] font-black mb-6">
+          About The Channel
+        </p>
 
-    <p>
-      As a child, I heard the old myth that cats don’t just have one life, but nine.
-      Each one a chance to begin again, survive, and evolve. That idea stayed with me.
-      A quiet reminder that we are never limited to one version of ourselves.
-    </p>
+        <h2 className="text-4xl md:text-6xl font-black leading-[0.95] tracking-tight mb-8">
+          Yoga for real life,
+          <br />
+          not perfection.
+        </h2>
 
-    <p>
-      My own life has moved through many seasons. 
-      Different identities, different ambitions, different versions of myself.
-      Through all of it, yoga was the constant. 
-      When I practice, I feel connected not just to who I was becoming, but to every version of myself that had come before.
-    </p>
-    
-    <p>
-      I share my yoga journey because I want others to feel what I’ve found through this practice: a sense of grounding, clarity, and coming back home to yourself.
-    </p>
-  
-    <p>
-      That’s how <span className="italic">ninth life yoga</span> was born.
-    </p>
+        {/* <p className="text-lg leading-relaxed font-medium max-w-2xl my-4">
+          I’ve always felt a connection to mountain goats. They’re resilient, adaptable, and move with this quiet confidence across unpredictable terrain. There’s something about the way they stay steady themselves that resonates with how I try to approach my life and my yoga practice.
+        </p> */}
+        <p className="text-lg leading-relaxed font-medium max-w-2xl my-4">
+        I first started by making videos just for my grandparents, showing them simple stretches they could do at home. It was never meant to be anything beyond that—just a way to help people I love who live far away.
+        </p>
+        <p className="text-lg leading-relaxed font-medium max-w-2xl my-4">
+          But in the process, I realized I loved teaching. Over time, it naturally became something I did more consistently.
+        </p>
+        <p className="text-lg leading-relaxed font-medium max-w-2xl my-4">
+          Some flows are strong, some are slow, and most are somewhere in between. What matters most to me is showing up, even in small ways, and staying consistent over time.
+          Because I’ve found that consistency is what actually creates change. 
+        </p>
+        <p className="text-lg leading-relaxed font-medium max-w-2xl my-4">
+          That’s what <span className="italic uppercase">la cabra yoga</span> is built on.
+        </p>
+      </div>
+
+      <div className="lg:col-span-5 p-8 md:p-10 flex flex-col justify-center">
+        <div className="text-2xl my-6">
+          ❝
+        </div>
+
+        <blockquote className="text-3xl md:text-4xl">
+          Your practice
+          begins where
+          you are.
+        </blockquote>
+
+        <div className="text-2xl my-6 self-end">
+          ❞
+        </div>
+      </div>
     </section>
   );
 }
+
+export default About;
+
