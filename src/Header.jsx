@@ -30,8 +30,8 @@ export default function Header() {
         ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 -translate-y-6 blur-sm"}
       `}
     >
-      <div className="mt-6 md:mt-10 px-10 md:px-14 py-6 md:py-8">
-        <h1 className="text-4xl md:text-6xl tracking-widest uppercase">
+      <div className="mt-6 md:mt-10 py-6 md:py-8">
+        <h1 className="text-4xl md:text-5xl tracking-widest uppercase">
           La Cabra Yoga
         </h1>
         <h3 className="text-xs md:text-base tracking-wider mt-2">
@@ -41,4 +41,5 @@ export default function Header() {
     </header>
   );
 }
+
 

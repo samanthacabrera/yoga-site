@@ -12,11 +12,8 @@ function About() {
           not perfection.
         </h2>
 
-        {/* <p className="text-lg leading-relaxed font-medium max-w-2xl my-4">
-          I’ve always felt a connection to mountain goats. They’re resilient, adaptable, and move with this quiet confidence across unpredictable terrain. There’s something about the way they stay steady themselves that resonates with how I try to approach my life and my yoga practice.
-        </p> */}
         <p className="text-lg leading-relaxed font-medium max-w-2xl my-4">
-        I first started by making videos just for my grandparents, showing them simple stretches they could do at home. It was never meant to be anything beyond that—just a way to help people I love who live far away.
+        I first started by making videos just for my grandparents, showing them simple stretches they could do at home.
         </p>
         <p className="text-lg leading-relaxed font-medium max-w-2xl my-4">
           But in the process, I realized I loved teaching. Over time, it naturally became something I did more consistently.
