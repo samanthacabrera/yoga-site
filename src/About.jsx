@@ -1,50 +1,30 @@
-function About() {
+export default function About() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-      <div className="lg:col-span-7">
-        <p className="uppercase text-xs tracking-[0.3em] font-black mb-6">
-          About The Channel
-        </p>
+    <section className="space-y-16 pt-24 text-[#2c1e11]">
+      <div className="flex flex-col items-center text-center space-y-12">
+        <div className="relative">
+          <div className="absolute inset-0 translate-x-3 translate-y-3 bg-[#355070]/20 rounded-full" />
 
-        <h2 className="text-4xl md:text-6xl font-black leading-[0.95] tracking-tight mb-8">
-          Yoga for real life,
-          <br />
-          not perfection.
-        </h2>
-
-        <p className="text-lg leading-relaxed font-medium max-w-2xl my-4">
-        I first started by making videos just for my grandparents, showing them simple stretches they could do at home.
-        </p>
-        <p className="text-lg leading-relaxed font-medium max-w-2xl my-4">
-          But in the process, I realized I loved teaching. Over time, it naturally became something I did more consistently.
-        </p>
-        <p className="text-lg leading-relaxed font-medium max-w-2xl my-4">
-          Some flows are strong, some are slow, and most are somewhere in between. What matters most to me is showing up, even in small ways, and staying consistent over time.
-          Because I’ve found that consistency is what actually creates change. 
-        </p>
-        <p className="text-lg leading-relaxed font-medium max-w-2xl my-4">
-          That’s what <span className="italic uppercase">la cabra yoga</span> is built on.
-        </p>
-      </div>
-
-      <div className="lg:col-span-5 p-8 md:p-10 flex flex-col justify-center">
-        <div className="text-2xl my-6">
-          ❝
+          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border border-[#2c1e11] bg-[#c4dfe9] flex items-center justify-center overflow-hidden">
+            <p className="uppercase text-xs tracking-[0.35em] font-black text-[#2c1e11]/60">
+              add photo hereeee 
+            </p>
+          </div>
+        </div>
+        
+        <div className="space-y-4">
+            <p className="uppercase tracking-[0.30em] font-medium text-[#2c1e11]/60">
+            Get to Know
+            </p>  
+          <h3 className="text-4xl md:text-6xl font-black uppercase tracking-wide">
+            Sam
+          </h3>
         </div>
 
-        <blockquote className="text-3xl md:text-4xl">
-          Your practice
-          begins where
-          you are.
-        </blockquote>
-
-        <div className="text-2xl my-6 self-end">
-          ❞
-        </div>
+        <p className="mt-12 text-[#2c1e11]/70 max-w-2xl leading-loose">
+         I was born and raised in Southern California. I currently live in Utrecht with my husband and our sweet cat, Ares. In my free time, you can find me crocheting, solving puzzles, or watching movies. When the weather permits, I love to go on picnics and hike. I am in constant pursuit of new experiences, embracing the richness that life has to offer.
+        </p>
       </div>
     </section>
   );
 }
-
-export default About;
-
