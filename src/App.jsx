@@ -3,7 +3,6 @@ import Hero from "./Hero";
 import Intro from "./Intro";
 import Library from "./Library";
 import Philosophy from "./Philosphy";
-import Booking from "./Booking";
 import About from "./About";
 import Footer from "./Footer";
 
@@ -15,7 +14,6 @@ function App() {
       <Intro />
       <Library />
       <Philosophy />
-      <Booking />
       <About />
       <Footer />
     </div>

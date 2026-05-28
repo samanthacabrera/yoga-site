@@ -1,17 +1,19 @@
 export default function Philosophy() {
   return (
-    <section className="relative overflow-hidden rounded-lg border border-[#2a3f55] bg-[#355070] text-white px-8 py-16 md:px-16 md:py-24">
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#FFBC40]/10 blur-3xl rounded-full" />
+    <section className="relative overflow-hidden rounded-lg bg-[#355070] text-white px-8 py-16 md:px-16 md:py-24">
+      <div className="absolute top-24 right-0 w-[500px] h-[500px] bg-[#FFBC40]/30 blur-3xl rounded-full" />
 
       <div className="relative max-w-5xl">
-        <p className="uppercase text-xs tracking-[0.35em] font-black text-[#FFBC40] mb-10">
-          consistency & adaptability
+        <p className="uppercase text-xs tracking-[0.35em]  text-[#FFBC40] mb-10">
+          Our Philosophy
         </p>
 
-        <h2 className="text-5xl md:text-7xl tracking-[-0.06em] font-black uppercase max-w-4xl">
-            Teaching
+        <h2 className="text-5xl md:text-6xl leading-loose tracking-tight">
+          Adaptive 
           <br />
-          Philosophy
+          &
+          <br /> 
+          Sustainable
         </h2>
 
         <div className="my-16 grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -39,13 +41,6 @@ export default function Philosophy() {
                 The main intention I want my audience to leave with is simple: to meet each day as it is, adapt with awareness, and make the most of it. Life is meant to be enjoyed, on and off the mat. 
             </p>
           </div>
-        </div>
-
-        <div className="mt-20 flex items-center gap-6">
-            <div className="h-px w-20 bg-[#FFBC40]" />
-            <p className="uppercase tracking-[0.3em] text-sm font-black text-[#FFBC40]">
-                sam cabrera
-            </p>
         </div>
       </div>
     </section>

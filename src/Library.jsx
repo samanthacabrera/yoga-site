@@ -53,12 +53,12 @@ export default function Library() {
       : videos.filter((video) => video.category === activeFilter);
 
   return (
-    <section className="space-y-16 pt-24 text-[#2c1e11]">
+    <section className="space-y-16 text-[#2c1e11]">
       <div className="flex flex-col gap-3">
-        <h2 className="text-5xl md:text-6xl font-black uppercase tracking-wide">
+        <h2 className="text-5xl md:text-6xl tracking-wide">
           Library
         </h2>
-        <p className="text-lg md:text-xl font-medium text-[#2c1e11]/70 max-w-2xl">
+        <p className="text-lg md:text-xl  text-[#2c1e11]/70 max-w-2xl">
           Explore flows aligned with different chakras and intentions. 
         </p>
       </div>
@@ -71,7 +71,7 @@ export default function Library() {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-5 py-2 uppercase text-[11px] tracking-[0.35em] font-medium border border-[#2c1e11] rounded-full transition-all ${
+              className={`px-5 py-2 uppercase text-[11px] tracking-[0.35em]  border border-[#2c1e11] rounded-full transition-all ${
                 active
                   ? "bg-[#2c1e11] text-white"
                   : "bg-transparent hover:bg-[#2c1e11] hover:text-white"
@@ -87,28 +87,28 @@ export default function Library() {
         {filteredVideos.map((video) => (
           <div
             key={video.title}
-            className={`${video.color} border border-[#2c1e11] rounded-lg p-6 flex flex-col justify-between min-h-[260px]`}
+            className={`${video.color} border shadow rounded-lg p-6 flex flex-col justify-between min-h-[260px]`}
           >
             <div className="space-y-1">
-              <p className="uppercase text-[11px] tracking-[0.35em] font-medium">
+              <p className="uppercase text-[11px] tracking-[0.35em] ">
                 {video.category}
               </p>
 
-              <h3 className="text-2xl md:text-3xl font-black leading-tight uppercase tracking-[-0.03em]">
+              <h3 className="text-2xl md:text-3xl  leading-tight uppercase tracking-[-0.03em]">
                 {video.title}
               </h3>
 
-              <p className="text-sm font-medium opacity-80">
+              <p className="text-sm  opacity-80">
                 {video.chakra}
               </p>
             </div>
 
             <div className="flex items-center justify-between mt-10">
-              <p className="text-sm font-medium">
+              <p className="text-sm ">
                 {video.duration}
               </p>
 
-              <button className="w-11 h-11 rounded-full border border-[#2c1e11] bg-white text-[#2c1e11] font-black flex items-center justify-center hover:bg-[#2c1e11] hover:text-white transition-colors">
+              <button className="w-11 h-11 rounded-full border border-[#2c1e11] bg-white text-[#2c1e11]  flex items-center justify-center hover:bg-[#2c1e11] hover:text-white transition-colors">
                 ▶
               </button>
             </div>

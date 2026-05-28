@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className=" w-full min-h-[25vh] flex items-end py-12">
       <div className="w-full mx-auto flex flex-col md:flex-row md:justify-between">
 
-        <div className="hidden md:flex uppercase">
+        <div className="hidden md:flex">
           La Cabra Yoga 
         </div>
 
