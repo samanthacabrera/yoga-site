@@ -4,6 +4,10 @@ export default function Hero() {
       <div className="lg:col-span-8 relative overflow-hidden rounded-lg shadow bg-[#c35d31] text-white px-8 py-16 md:px-16 md:py-24">
         <div className="absolute top-12 left-12 w-[500px] h-[500px] bg-yellow-300/30 blur-3xl rounded-full" />
 
+        <p className="uppercase text-xs tracking-[0.3em] mb-6">
+          New videos every week
+        </p>
+
         <div className="flex flex-col max-w-2xl font-bold">
           <p className="text-2xl">❝</p>
 
@@ -16,8 +20,13 @@ export default function Hero() {
 
         <div className="text-lg space-y-6 my-12 max-w-2xl">
           <p>
-            Every class fits into a busy day while still offering challenge,
-            mindfulness, and space to reconnect with yourself.
+            Every Monday, a new 20-minute Power Vinyasa Flow is posted, with a
+            focus on building strength and flexibility.
+          </p>
+
+          <p>
+            Every Wednesday, you'll find a 10-minute Stretch & Breath Flow designed
+            to improve mobility.
           </p>
         </div>
 
