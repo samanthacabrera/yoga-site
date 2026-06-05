@@ -38,7 +38,7 @@ export default function Philosophy() {
             </p>
 
             <p className="leading-loose">
-                The main intention I want my audience to leave with is simple: to meet each day as it is, adapt with awareness, and make the most of it. Life is meant to be enjoyed, on and off the mat. 
+                The main intention I want my audience to leave with is simple: to meet each day as it is, adapt with awareness, and make the most of it. 
             </p>
           </div>
         </div>
