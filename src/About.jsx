@@ -14,21 +14,21 @@ export default function About() {
           </div>
         </div>
 
-        <div className="lg:col-span-8 flex flex-col justify-between h-full lg:pl-10">
+        <div className="lg:col-span-8 flex flex-col justify-between h-full lg:pl-10 text-left">
 
           <div className="space-y-10">
 
-            <div className="space-y-5">
-              <p className="uppercase font-medium text-[11px] tracking-[0.35em] text-[#355070]">
+            <div className="space-y-2">
+              <p className="uppercase font-medium text-sm tracking-[0.35em] opacity-80">
                 Meet
               </p>
 
-              <h2 className="text-5xl md:text-7xl tracking-[-0.08em] font-light leading-none text-[#291503]">
+              <h2 className="text-5xl md:text-7xl font-light leading-none text-[#291503]">
                 Sam
               </h2>
             </div>
 
-            <div className="max-w-2xl space-y-8 text-base md:text-lg leading-[1.9] text-black/65">
+            <div className="max-w-2xl space-y-8 text-base md:text-lg leading-[1.9] opacity-80">
 
               <p>
                 I was born and raised in Southern California and currently live

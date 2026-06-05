@@ -39,7 +39,7 @@ export default function Hero() {
       </div>
 
       <div className="lg:col-span-4 grid grid-cols-1 gap-6">
-        <div className="bg-[#c35d31] text-white rounded-lg p-8 min-h-[170px] flex flex-col justify-between">
+        <div className="bg-[#355070] text-white rounded-lg p-8 min-h-[170px] flex flex-col justify-between">
           <div>
             <p className="uppercase text-xs tracking-[0.25em] mb-6">
               Flows
