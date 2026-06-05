@@ -1,8 +1,8 @@
 export default function Hero() {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-      <div className="lg:col-span-8 relative overflow-hidden rounded-lg shadow bg-[#c35d31] text-white px-8 py-16 md:px-16 md:py-24">
-        <div className="absolute top-12 left-12 w-[500px] h-[500px] bg-yellow-300/30 blur-3xl rounded-full" />
+      <div className="lg:col-span-8 relative overflow-hidden rounded-lg shadow bg-[#FFBC40] px-8 py-16 md:px-16 md:py-24">
+        <div className="absolute top-12 left-12 w-[500px] h-[500px] bg-orange-600/30 blur-3xl rounded-full" />
 
         <p className="uppercase text-xs tracking-[0.3em] mb-6">
           New videos every week
@@ -20,13 +20,11 @@ export default function Hero() {
 
         <div className="text-lg space-y-6 my-12 max-w-2xl">
           <p>
-            Every Monday, a new 20-minute Power Vinyasa Flow is posted, with a
-            focus on building strength and flexibility.
+            Every Monday, I share a new 20-minute vinyasa flow, inspired by my personal practice.
           </p>
 
           <p>
-            Every Wednesday, you'll find a 10-minute Stretch & Breath Flow designed
-            to improve mobility.
+            I pride my flows on being accessible for beginners while still offering challenge, depth, and room to grow for any yogi. 
           </p>
         </div>
 
@@ -34,14 +32,14 @@ export default function Hero() {
           href="https://youtube.com"
           target="_blank"
           rel="noreferrer"
-          className="inline-block uppercase text-xs tracking-[0.3em] hover:opacity-70 transition-opacity"
+          className="uppercase text-xs tracking-[0.3em] border-b border-transparent hover:border-b-[#291503]"
         >
           Watch Latest Flow
         </a>
       </div>
 
       <div className="lg:col-span-4 grid grid-cols-1 gap-6">
-        <div className="bg-[#FFBC40] rounded-lg p-8 min-h-[170px] flex flex-col justify-between">
+        <div className="bg-[#c35d31] text-white rounded-lg p-8 min-h-[170px] flex flex-col justify-between">
           <div>
             <p className="uppercase text-xs tracking-[0.25em] mb-6">
               Flows
@@ -73,7 +71,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="bg-[#2c1e11] text-white rounded-lg p-8 min-h-[170px] flex flex-col justify-between">
+        <div className="bg-[#355070] text-white rounded-lg p-8 min-h-[170px] flex flex-col justify-between">
           <div>
             <p className="uppercase text-xs tracking-[0.25em] mb-6">
               Views
