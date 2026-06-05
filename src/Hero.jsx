@@ -2,23 +2,23 @@ export default function Hero() {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-12 gap-6">
       <div className="lg:col-span-8 relative overflow-hidden rounded-lg shadow bg-[#FFBC40] px-8 py-16 md:px-16 md:py-24">
-        <div className="absolute top-12 left-12 w-[500px] h-[500px] bg-orange-600/30 blur-3xl rounded-full" />
+        <div className="absolute top-12 left-4 w-[600px] h-[500px] bg-orange-600/30 blur-3xl rounded-full" />
 
         <p className="uppercase text-xs tracking-[0.3em] mb-6">
           New videos every week
         </p>
 
-        <div className="flex flex-col max-w-2xl font-bold">
+        <div className="flex flex-col max-w-2xl font-medium">
           <p className="text-2xl">❝</p>
 
-          <h1 className="text-4xl md:text-6xl leading-tight tracking-tight px-8 md:px-12 py-8">
+          <h1 className="text-4xl md:text-7xl leading-tight tracking-tight px-8 md:px-12 py-8">
             All you need is twenty minutes.
           </h1>
 
           <p className="text-2xl mr-8 -mt-2 self-end">❞</p>
         </div>
 
-        <div className="text-lg space-y-6 my-12 max-w-2xl">
+        <div className="text-lg space-y-6 my-6 md:my-12 max-w-2xl">
           <p>
             Every Monday, I share a new 20-minute vinyasa flow, inspired by my personal practice.
           </p>
@@ -32,7 +32,9 @@ export default function Hero() {
           href="https://youtube.com"
           target="_blank"
           rel="noreferrer"
-          className="uppercase text-xs tracking-[0.3em] border-b border-transparent hover:border-b-[#291503]"
+          className="px-5 py-2 uppercase text-[11px] tracking-[0.35em] border border-[#2c1e11] rounded-full transition-all 
+                  bg-[#2c1e11]
+                  bg-transparent hover:bg-[#2c1e11] hover:text-white"
         >
           Watch Latest Flow
         </a>
@@ -78,7 +80,7 @@ export default function Hero() {
             </p>
 
             <h3 className="text-6xl leading-none">
-              1M+
+              1K+
             </h3>
           </div>
 
