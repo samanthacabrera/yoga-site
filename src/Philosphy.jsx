@@ -9,37 +9,14 @@ export default function Philosophy() {
         </p>
 
         <h2 className="text-5xl md:text-6xl leading-loose tracking-tight">
-          Adaptive 
-          <br />
-          &
-          <br /> 
-          Sustainable
+          Move & Explore
         </h2>
 
         <div className="my-16 grid grid-cols-1 lg:grid-cols-12 gap-10">
-          <div className="lg:col-span-11 space-y-4">
-            <p className="leading-loose">
-                I’ve always felt a connection to mountain goats. They’re resilient, adaptable animals that navigate steep and unpredictable terrain with steady focus and balance. They don’t resist the environment, they adjust to it.
-            </p>
-            <p className="leading-loose">
-                My practice is rooted in this same principle: strength without unnecessary tension, mobility without collapse, and control that comes from awareness rather than force.
-            </p>
-
-            <p className="leading-loose">
-                On the mat, this shows up in breath-led movement, progressive loading, and learning to maintain steady pacing through transitions. Off the mat, it extends into stress regulation, focus, and the ability to stay regulated in moments of discomfort or change.
-            </p>
-            
-            <p className="leading-loose">
-                These flows are designed to support that process. They help you reconnect to the body through breath, build sustainable strength and mobility, and develop a more stable internal baseline. The intention is not performance, but consistency.
-            </p>
-
-            <p className="leading-loose">
-                For me, consistency matters more than intensity. That’s why my tutorials stay around 20 minutes. It’s a realistic window for most schedules, designed to reduce friction and support daily practice.
-            </p>
-
-            <p className="leading-loose">
-                The main intention I want my audience to leave with is simple: to meet each day as it is, adapt with awareness, and make the most of it. 
-            </p>
+          <div className="lg:col-span-8 space-y-4">
+            <p><span className="italic">Sam Flows</span> is my yoga diary: a place to document flows, routines, lessons, and experiences as they unfold. Some days bring progress. Other days bring perspective. Both are worth sharing.</p>
+            <p>Through yoga, Pilates, and mindful movement, I've found new ways to build strength, improve mobility, and reconnect with my body. By sharing what I learn along the way, I hope to inspire others to explore movement and experience the same sense of well-being that keeps drawing me back to the mat. </p>
+            <p>Remember, there is no finish line, only the practice itself and the joy of returning to it.</p>
           </div>
         </div>
       </div>

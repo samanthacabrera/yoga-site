@@ -32,11 +32,8 @@ export default function Header() {
     >
       <div className="mt-6 md:mt-10 py-6 md:py-8">
         <h1 className="text-4xl md:text-5xl tracking-widest ">
-          La Cabra Yoga
+          Sam Flows
         </h1>
-        <h3 className="text-xs md:text-base tracking-wider mt-2">
-          with Sam Cabrera
-        </h3>
       </div>
     </header>
   );

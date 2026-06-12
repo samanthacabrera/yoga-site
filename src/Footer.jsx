@@ -30,7 +30,7 @@ export default function Footer() {
       <div className="w-full mx-auto flex flex-col md:flex-row md:justify-between">
 
         <div className="hidden md:flex">
-          La Cabra Yoga 
+          Sam Flows 
         </div>
 
         <div className="flex gap-2 self-center">
