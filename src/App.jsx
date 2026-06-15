@@ -7,7 +7,7 @@ import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="flex flex-col max-w-5xl mx-4 lg:mx-auto space-y-60">
+    <div className="flex flex-col max-w-4xl mx-4 lg:mx-auto space-y-60">
       <Header />
       <Hero />
       <Library />

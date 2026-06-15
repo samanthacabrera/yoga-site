@@ -1,92 +1,82 @@
 export default function Hero() {
+  const items = [
+    "CHANNEL",
+    "PHILOSOPHY",
+    "CHALLENGES",
+    "READINGS",
+    "SPOTIFY",
+    "ABOUT",
+    "SUPPORT",
+  ];
+
+  const SIZE = 700;
+  const CENTER = SIZE / 2;
+
+  const spiralPoints = items.map((_, i) => {
+    const t = i * 0.9; 
+    const a = 8;
+    const b = 55;
+
+    const radius = a + b * t;
+
+    return {
+      x: CENTER + Math.cos(t) * radius,
+      y: CENTER + Math.sin(t) * radius,
+    };
+  });
+
+  const spiralPath = spiralPoints.reduce((acc, p, i) => {
+    if (i === 0) return `M ${p.x} ${p.y}`;
+
+    const prev = spiralPoints[i - 1];
+
+    const cx = (prev.x + p.x) / 2;
+    const cy = (prev.y + p.y) / 2;
+
+    return `${acc} Q ${prev.x} ${prev.y} ${cx} ${cy}`;
+  }, "");
+
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-      <div className="lg:col-span-8 relative overflow-hidden rounded-lg shadow bg-[#FFBC40] px-8 py-16 md:px-16 md:py-24">
-        <div className="absolute top-12 left-4 w-[600px] h-[500px] bg-orange-600/30 blur-3xl rounded-full" />
-
-        <p className="uppercase text-xs tracking-[0.3em] mb-6">
-          New videos every week
-        </p>
-
-        <div className="flex flex-col max-w-2xl font-medium">
-          <p className="text-2xl">❝</p>
-
-          <h1 className="text-4xl md:text-7xl leading-tight tracking-tight px-8 md:px-12 py-8">
-            All you need is twenty minutes.
-          </h1>
-
-          <p className="text-2xl mr-8 -mt-2 self-end">❞</p>
-        </div>
-
-        <div className="text-lg space-y-6 my-6 md:my-12 max-w-2xl">
-          <p>
-            Every Monday, I share a new 20-minute vinyasa flow, inspired by my personal practice.
-          </p>
-
-          <p>
-            I pride my flows on being accessible for beginners while still offering challenge, depth, and room to grow for any yogi. 
-          </p>
-        </div>
-
-        <a
-          href="https://youtube.com"
-          target="_blank"
-          rel="noreferrer"
-          className="px-5 py-2 uppercase text-[11px] tracking-[0.35em] border border-[#2c1e11] rounded-full transition-all 
-                  bg-[#2c1e11]
-                  bg-transparent hover:bg-[#2c1e11] hover:text-white"
-        >
-          Watch Latest Flow
-        </a>
+    <section className="relative -translate-y-1/4 min-h-screen overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute left-1/3 top-1/4 h-96 w-96 rounded-full bg-[#dccab6]/20 blur-3xl" />
+        <div className="absolute right-1/3 bottom-1/4 h-[30rem] w-[30rem] rounded-full bg-[#efe7de]/40 blur-3xl" />
       </div>
 
-      <div className="lg:col-span-4 grid grid-cols-1 gap-6">
-        <div className="bg-[#355070] text-white rounded-lg p-8 min-h-[170px] flex flex-col justify-between">
-          <div>
-            <p className="uppercase text-xs tracking-[0.25em] mb-6">
-              Flows
-            </p>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="relative h-[700px] w-[700px]">
 
-            <h3 className="text-6xl leading-none">
-              1+
-            </h3>
-          </div>
+          <svg className="absolute inset-0 h-full w-full" viewBox={`0 0 ${SIZE} ${SIZE}`}>
+            <path
+              d={spiralPath}
+              fill="none"
+              stroke="rgba(41,21,3,.12)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
 
-          <p className="mt-5 text-lg">
-            guided vinyasa flows to explore
-          </p>
-        </div>
+          {items.map((label, i) => (
+            <a
+              key={label}
+              href={`#${label.toLowerCase()}`}
+              style={{
+                left: spiralPoints[i].x,
+                top: spiralPoints[i].y,
+                transform: "translate(-50%, -50%)",
+              }}
+              className="absolute group"
+            >
+              <div className="flex flex-col items-center gap-2">
+                <div className="h-2.5 w-2.5 rounded-full bg-[#291503]/25 transition-all duration-500 group-hover:scale-150 group-hover:bg-[#291503]" />
 
-        <div className="bg-[#c4dfe9] rounded-lg p-8 min-h-[170px] flex flex-col justify-between">
-          <div>
-            <p className="uppercase text-xs tracking-[0.25em] mb-6">
-              Community
-            </p>
+                <span className="text-[11px] md:text-sm tracking-[0.45em] text-[#291503]/70 group-hover:text-[#291503] transition-colors">
+                  {label}
+                </span>
+              </div>
+            </a>
+          ))}
 
-            <h3 className="text-6xl leading-none">
-              1+
-            </h3>
-          </div>
-
-          <p className="mt-5 text-lg">
-            yogis part of our growing community
-          </p>
-        </div>
-
-        <div className="bg-[#355070] text-white rounded-lg p-8 min-h-[170px] flex flex-col justify-between">
-          <div>
-            <p className="uppercase text-xs tracking-[0.25em] mb-6">
-              Views
-            </p>
-
-            <h3 className="text-6xl leading-none">
-              1K+
-            </h3>
-          </div>
-
-          <p className="mt-5 text-lg">
-            views across all platforms
-          </p>
         </div>
       </div>
     </section>

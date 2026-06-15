@@ -24,13 +24,13 @@ export default function Header() {
   return (
     <header
       className={`
-        fixed top-0 left-0 w-full z-50 bg-[#f3f3ee]
+        fixed top-0 left-0 w-full z-50 
         flex justify-center
         transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
         ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 -translate-y-6 blur-sm"}
       `}
     >
-      <div className="mt-6 md:mt-10 py-6 md:py-8">
+      <div className="mt-2 py-6 md:py-8">
         <h1 className="text-4xl md:text-5xl tracking-widest ">
           Sam Flows
         </h1>
