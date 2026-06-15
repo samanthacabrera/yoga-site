@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Hero from "./Hero";
+import Channel from "./Channel";
 import Library from "./Library";
 import Philosophy from "./Philosphy";
 import About from "./About";
@@ -10,6 +11,7 @@ function App() {
     <div className="flex flex-col max-w-4xl mx-4 lg:mx-auto space-y-60">
       <Header />
       <Hero />
+      <Channel />
       <Library />
       <Philosophy />
       <About />
