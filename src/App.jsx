@@ -11,8 +11,8 @@ function App() {
     <div className="flex flex-col max-w-4xl mx-4 lg:mx-auto space-y-60">
       <Header />
       <Hero />
-      <Channel />
       <Library />
+      <Channel />
       <Philosophy />
       <About />
       <Footer />

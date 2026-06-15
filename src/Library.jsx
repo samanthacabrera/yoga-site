@@ -53,7 +53,7 @@ export default function Library() {
       : videos.filter((video) => video.category === activeFilter);
 
   return (
-    <section className="space-y-16 text-[#2c1e11]">
+    <section id="channel" className="scroll-mt-12 space-y-16 text-[#2c1e11]">
       <div className="flex flex-col gap-3">
         <h2 className="text-5xl md:text-6xl tracking-wide">
           Library

@@ -1,8 +1,8 @@
 export default function Channel() {
   return (
     <section 
-        id="channel"
-        className="relative overflow-hidden rounded-lg bg-[#355070] scroll-mt-24 px-8 py-24 md:px-16">
+        id="cta"
+        className="relative overflow-hidden rounded-lg bg-[#355070] px-8 py-24 md:px-16">
 
       <div className="absolute inset-0">
         <div className="absolute right-0 top-1/2 h-[420px] w-[420px] -translate-y-1/2 bg-[#FFBC40]/15 blur-3xl rounded-full" />
