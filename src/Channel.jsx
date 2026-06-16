@@ -7,7 +7,6 @@ export default function Channel() {
       <div className="absolute inset-0 bg-[#f3f3ee]/70" />
 
       <div className="absolute left-1/2 top-24 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-[#FFBC40]/8 blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 h-[28rem] w-[28rem] rounded-full bg-[#355070]/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-5xl text-center">
         <p className="text-[11px] uppercase tracking-[0.4em] text-[#291503]/50">
