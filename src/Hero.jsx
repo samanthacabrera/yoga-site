@@ -1,155 +1,83 @@
-"use client";
+export default function Hero() {
+  const items = [
+    "CHANNEL",
+    "PHILOSOPHY",
+    "CHALLENGES",
+    "READINGS",
+    "SPOTIFY",
+    "ABOUT",
+    "CONTACT",
+  ];
 
-import { useState } from "react";
+  const SIZE = 700;
+  const CENTER = SIZE / 2;
 
-const challenges = [
-  {
-    title: "Deep Hips Reset",
-    duration: "7 days",
-    focus: "Foundations of Splits",
-    level: "Beginner",
-    tint: "bg-[#c4dfe9]/25",
-  },
-  {
-    title: "Middle Split Flow",
-    duration: "14 days",
-    focus: "Open Range Mobility",
-    level: "Intermediate",
-    tint: "bg-[#FFBC40]/25",
-  },
-  {
-    title: "Over Split Path",
-    duration: "21 days",
-    focus: "Advanced Extension",
-    level: "Advanced",
-    tint: "bg-[#c35d31]/20",
-  },
-  {
-    title: "Backbend Arc",
-    duration: "30 days",
-    focus: "Spine + Heart Opening",
-    level: "All Levels",
-    tint: "bg-[#355070]/10",
-  },
-];
+  const spiralPoints = items.map((_, i) => {
+    const t = i * 0.9; 
+    const a = 8;
+    const b = 55;
 
-const filters = ["All", "Beginner", "Intermediate", "Advanced", "All Levels"];
+    const radius = a + b * t;
 
-export default function Challenges() {
-  const [active, setActive] = useState("All");
+    return {
+      x: CENTER + Math.cos(t) * radius,
+      y: CENTER + Math.sin(t) * radius,
+    };
+  });
 
-  const filtered =
-    active === "All"
-      ? challenges
-      : challenges.filter((c) => c.level === active);
+  const spiralPath = spiralPoints.reduce((acc, p, i) => {
+    if (i === 0) return `M ${p.x} ${p.y}`;
+
+    const prev = spiralPoints[i - 1];
+
+    const cx = (prev.x + p.x) / 2;
+    const cy = (prev.y + p.y) / 2;
+
+    return `${acc} Q ${prev.x} ${prev.y} ${cx} ${cy}`;
+  }, "");
 
   return (
-    <section className="relative overflow-hidden bg-[#f3f3ee] text-[#291503] px-6 md:px-16 py-20">
-
-      {/* soft ambient fields */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-1/4 top-1/3 h-[420px] w-[420px] bg-[#FFBC40]/10 blur-3xl rounded-full" />
-        <div className="absolute right-1/4 bottom-1/3 h-[380px] w-[380px] bg-[#c4dfe9]/15 blur-3xl rounded-full" />
+    <section className="relative -translate-y-1/4 min-h-screen overflow-hidden">
+      <div className="absolute inset-0">
+        <div className="absolute left-1/3 top-1/4 h-96 w-96 rounded-full bg-[#dccab6]/20 blur-3xl" />
+        <div className="absolute right-1/3 bottom-1/4 h-[30rem] w-[30rem] rounded-full bg-[#efe7de]/40 blur-3xl" />
       </div>
 
-      <div className="relative max-w-6xl mx-auto">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="relative h-[700px] w-[700px]">
 
-        {/* HEADER (asymmetric layout) */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+          <svg className="absolute inset-0 h-full w-full" viewBox={`0 0 ${SIZE} ${SIZE}`}>
+            <path
+              d={spiralPath}
+              fill="none"
+              stroke="rgba(41,21,3,.12)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
 
-          <div className="space-y-2 max-w-xl">
-            <p className="text-[10px] tracking-[0.45em] uppercase text-[#291503]/50">
-              movement challenges
-            </p>
+          {items.map((label, i) => (
+            <a
+              key={label}
+              href={`#${label.toLowerCase()}`}
+              style={{
+                left: spiralPoints[i].x,
+                top: spiralPoints[i].y,
+                transform: "translate(-50%, -50%)",
+              }}
+              className="absolute group"
+            >
+              <div className="flex flex-col items-center gap-2">
+                <div className="h-2.5 w-2.5 rounded-full bg-[#291503]/25 transition-all duration-500 group-hover:scale-150 group-hover:bg-[#291503]" />
 
-            <h2 className="text-4xl md:text-6xl leading-tight tracking-tight">
-              7 → 30 day
-              <br />
-              flexibility arcs
-            </h2>
-          </div>
-
-          <p className="text-sm text-[#291503]/60 max-w-sm leading-relaxed">
-            structured progression paths for splits, mobility, and deep range work —
-            designed to be revisited, not completed.
-          </p>
-
-        </div>
-
-        {/* FILTERS (slightly offset / playful grid feel) */}
-        <div className="flex flex-wrap gap-3 mb-14 md:ml-10">
-
-          {filters.map((f) => {
-            const isActive = f === active;
-
-            return (
-              <button
-                key={f}
-                onClick={() => setActive(f)}
-                className={`px-5 py-2 rounded-full text-[11px] tracking-[0.35em] uppercase border border-[#291503]/20 transition-all ${
-                  isActive
-                    ? "bg-[#291503] text-[#f3f3ee]"
-                    : "bg-transparent hover:bg-[#291503] hover:text-[#f3f3ee]"
-                }`}
-              >
-                {f}
-              </button>
-            );
-          })}
-
-        </div>
-
-        {/* GRID (asymmetric layout feel) */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-
-          {filtered.map((c, i) => {
-            const offset =
-              i % 3 === 0
-                ? "md:col-span-5"
-                : i % 3 === 1
-                ? "md:col-span-4 md:translate-y-6"
-                : "md:col-span-3 md:-translate-y-4";
-
-            return (
-              <div
-                key={c.title}
-                className={`${offset} ${c.tint} border border-[#291503]/10 rounded-2xl p-6 md:p-7 flex flex-col justify-between min-h-[260px] transition hover:scale-[1.01]`}
-              >
-
-                {/* top */}
-                <div className="space-y-2">
-                  <p className="text-[10px] tracking-[0.45em] uppercase text-[#291503]/50">
-                    {c.duration}
-                  </p>
-
-                  <h3 className="text-2xl leading-tight tracking-tight">
-                    {c.title}
-                  </h3>
-
-                  <p className="text-sm text-[#291503]/70">
-                    {c.focus}
-                  </p>
-                </div>
-
-                {/* bottom */}
-                <div className="flex items-center justify-between mt-10">
-
-                  <p className="text-[10px] tracking-[0.35em] uppercase text-[#291503]/50">
-                    {c.level}
-                  </p>
-
-                  <button className="w-10 h-10 rounded-full border border-[#291503]/20 flex items-center justify-center hover:bg-[#291503] hover:text-[#f3f3ee] transition">
-                    ▶
-                  </button>
-
-                </div>
-
+                <span className="text-[11px] md:text-sm tracking-[0.45em] text-[#291503]/70 group-hover:text-[#291503] transition-colors">
+                  {label}
+                </span>
               </div>
-            );
-          })}
+            </a>
+          ))}
 
         </div>
-
       </div>
     </section>
   );

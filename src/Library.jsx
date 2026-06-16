@@ -8,28 +8,28 @@ const videos = [
     duration: "18 min",
     category: "Grounding",
     chakra: "Root Chakra",
-    color: "bg-[#FFBC40]",
+    color: "#FFBC40",
   },
   {
     title: "Deep Stretch",
     duration: "25 min",
     category: "Creativity",
     chakra: "Sacral Chakra",
-    color: "bg-[#c4dfe9]",
+    color: "#c35d31",
   },
   {
     title: "Meditation Flow",
     duration: "15 min",
     category: "Inner Peace",
     chakra: "Crown Chakra",
-    color: "bg-[#355070]",
+    color: "#355070",
   },
   {
     title: "Power Yoga",
     duration: "30 min",
     category: "Confidence",
     chakra: "Solar Plexus",
-    color: "bg-[#FFBC40]",
+    color: "#c35d31",
   },
 ];
 
@@ -53,17 +53,24 @@ export default function Library() {
       : videos.filter((video) => video.category === activeFilter);
 
   return (
-    <section id="channel" className="scroll-mt-12 space-y-16 text-[#2c1e11]">
-      <div className="flex flex-col gap-3">
-        <h2 className="text-5xl md:text-6xl tracking-wide">
-          Library
-        </h2>
-        <p className="text-lg md:text-xl  text-[#2c1e11]/70 max-w-2xl">
-          Explore flows aligned with different chakras and intentions. 
+    <section
+      id="channel"
+      className="relative overflow-hidden scroll-mt-12 space-y-16 text-[#291503]"
+    >
+      <div className="absolute inset-0">
+        <div className="absolute left-1/4 top-20 h-96 w-96 rounded-full bg-[#c4dfe9]/20 blur-3xl" />
+        <div className="absolute right-1/4 bottom-0 h-[28rem] w-[28rem] rounded-full bg-[#FFBC40]/10 blur-3xl" />
+      </div>
+
+      <div className="relative flex flex-col gap-3">
+        <h2 className="text-5xl md:text-6xl tracking-wide">Library</h2>
+
+        <p className="max-w-2xl text-lg md:text-xl text-[#291503]/65">
+          Explore flows aligned with different chakras and intentions.
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-3">
+      <div className="relative flex flex-wrap gap-3">
         {filters.map((filter) => {
           const active = activeFilter === filter;
 
@@ -71,10 +78,10 @@ export default function Library() {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-5 py-2 uppercase text-[11px] tracking-[0.35em]  border border-[#2c1e11] rounded-full transition-all ${
+              className={`rounded-full border px-6 py-2 text-[11px] tracking-[0.45em] transition-all duration-500 ${
                 active
-                  ? "bg-[#2c1e11] text-white"
-                  : "bg-transparent hover:bg-[#2c1e11] hover:text-white"
+                  ? "border-[#291503] bg-[#291503] text-white"
+                  : "border-[#291503]/15 text-[#291503]/60 hover:border-[#291503]/35 hover:text-[#291503]"
               }`}
             >
               {filter}
@@ -83,36 +90,79 @@ export default function Library() {
         })}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div className="relative grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
         {filteredVideos.map((video) => (
-          <div
+          <article
             key={video.title}
-            className={`${video.color} border shadow rounded-lg p-6 flex flex-col justify-between min-h-[260px]`}
+            className="group relative min-h-[320px] overflow-hidden rounded-[2rem] border bg-[#f3f3ee] backdrop-blur-xl transition-all duration-700 hover:-translate-y-1 border-[video.color]"
+            style={{
+              borderColor: `${video.color}50`,
+            }}
           >
-            <div className="space-y-1">
-              <p className="uppercase text-[11px] tracking-[0.35em] ">
-                {video.category}
-              </p>
+            <div
+              className="absolute -right-12 -top-12 h-40 w-40 rounded-full blur-3xl opacity-20"
+              style={{
+                borderColor: video.color,
+                backgroundColor: video.color,
+              }}
+            />
 
-              <h3 className="text-2xl md:text-3xl  leading-tight uppercase tracking-[-0.03em]">
-                {video.title}
-              </h3>
+            <div
+              className="absolute -left-16 bottom-0 h-32 w-32 rounded-full blur-3xl opacity-10"
+              style={{
+                backgroundColor: video.color,
+              }}
+            />
 
-              <p className="text-sm  opacity-80">
-                {video.chakra}
-              </p>
+            <div className="relative flex h-full flex-col justify-between p-8">
+              <div className="space-y-5">
+                <div className="flex items-center gap-3">
+                  <div
+                    className="h-2 w-2 rounded-full"
+                    style={{
+                      backgroundColor: video.color,
+                    }}
+                  />
+
+                  <p className="uppercase text-[11px] tracking-[0.45em] text-[#291503]/45">
+                    {video.category}
+                  </p>
+                </div>
+
+                <h3 className="text-3xl leading-none tracking-[-0.04em] text-[#291503]">
+                  {video.title}
+                </h3>
+
+                <div className="flex items-center gap-3">
+                  <div
+                    className="h-px w-10"
+                    style={{
+                      backgroundColor: video.color,
+                    }}
+                  />
+
+                  <span className="text-sm text-[#291503]/50">
+                    {video.chakra}
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-12 flex items-center justify-between">
+                <p className="text-sm text-[#291503]/55">
+                  {video.duration}
+                </p>
+
+                <button
+                  className="flex h-12 w-12 items-center justify-center rounded-full border bg-white/50 text-[#291503]/60 transition-all duration-500 group-hover:scale-105"
+                  style={{
+                    borderColor: `${video.color}40`,
+                  }}
+                >
+                  ▶
+                </button>
+              </div>
             </div>
-
-            <div className="flex items-center justify-between mt-10">
-              <p className="text-sm ">
-                {video.duration}
-              </p>
-
-              <button className="w-11 h-11 rounded-full border border-[#2c1e11] bg-white text-[#2c1e11]  flex items-center justify-center hover:bg-[#2c1e11] hover:text-white transition-colors">
-                ▶
-              </button>
-            </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>
