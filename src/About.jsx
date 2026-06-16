@@ -2,33 +2,37 @@ import profilepic from "/profilepic.png";
 
 export default function About() {
   return (
-    <section className="relative py-28 md:py-40 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-5 relative">
-            <div className="absolute -top-6 -left-6 w-full h-full border border-[#291503]/10 rounded-[32px]" />
+    <section
+      id="about"
+      className="relative overflow-hidden scroll-mt-12 px-6 py-24 text-[#291503] md:px-16 md:py-28">
+      <div className="absolute inset-0 bg-[#f3f3ee]/70" />
 
-            <div className="relative overflow-hidden rounded-[32px] shadow-2xl">
-              <img
-                src={profilepic}
-                alt="Photo of Sam Cabrera"
-                className="w-full aspect-[4/5] object-cover hover:scale-105 transition-transform duration-700"
-              />
+      <div className="relative mx-auto max-w-6xl">
+        <div className="grid items-center gap-16 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <div className="relative mx-auto max-w-sm">
+              <div className="absolute -inset-2 rounded-[2.5rem] border border-[#291503]/10" />
+
+              <div className="relative overflow-hidden rounded-[2.5rem] bg-white/40 backdrop-blur-sm">
+                <img
+                  src={profilepic}
+                  alt="Photo of Sam Cabrera"
+                  className="aspect-[4/5] w-full object-cover transition duration-700 hover:scale-105"
+                />
+              </div>
             </div>
           </div>
 
-          <div className="lg:col-span-7">
-            <div className="mb-12">
-              <p className="uppercase tracking-[0.4em] text-xs text-[#8B6B4A] mb-4">
-                Meet
-              </p>
+          <div className="lg:col-span-7 text-center lg:text-left">
+            <p className="text-[11px] uppercase tracking-[0.4em] text-[#291503]/50">
+              Meet
+            </p>
 
-              <h2 className="relative text-6xl md:text-8xl font-light leading-none text-[#291503]">
-                Sam
-              </h2>
-            </div>
+            <h2 className="mt-6 text-6xl font-light tracking-tight md:text-8xl">
+              Sam
+            </h2>
 
-            <div className="max-w-2xl space-y-8 text-base md:text-lg leading-[1.9] opacity-80">
+            <div className="mx-auto mt-10 max-w-xl space-y-6 text-base leading-[1.9] text-[#291503]/70">
               <p>
                 I was born and raised in Southern California and currently live
                 in Utrecht with my husband and our sweet cat, Ares.

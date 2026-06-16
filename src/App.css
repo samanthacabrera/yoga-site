@@ -10,6 +10,10 @@ html {
   font-family: "Elms Sans", Helvetica, sans-serif;
   color: #291503;
   background-color: #f3f3ee;
+  background-image:
+    linear-gradient(to right, rgba(41, 21, 3, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(41, 21, 3, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
 }
 
 /* 

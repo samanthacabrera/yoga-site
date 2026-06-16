@@ -1,6 +1,8 @@
 export default function Philosophy() {
   return (
-    <section className="relative overflow-hidden rounded-lg bg-[#355070] text-white px-8 py-16 md:px-16 md:py-24">
+    <section
+      id="philosophy"
+      className="relative overflow-hidden rounded-lg bg-[#355070] scroll-mt-12 text-white px-8 py-16 md:px-16 md:py-24">
       <div className="absolute top-24 right-0 w-[500px] h-[500px] bg-[#FFBC40]/30 blur-3xl rounded-full" />
 
       <div className="relative max-w-5xl">
