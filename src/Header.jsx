@@ -31,7 +31,7 @@ export default function Header() {
       `}
     >
       <div className="mt-2 py-6 md:py-8">
-        <h1 className="text-4xl md:text-5xl tracking-widest ">
+        <h1 className="text-xl md:text-2xl tracking-widest ">
           Sam Flows
         </h1>
       </div>
