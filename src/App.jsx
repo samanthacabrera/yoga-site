@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Channel from "./Channel";
 import Library from "./Library";
 import Philosophy from "./Philosphy";
+import Readings from "./Readings";
 import About from "./About";
 import Footer from "./Footer";
 
@@ -14,6 +15,7 @@ function App() {
       <Channel />
       <Library />
       <Philosophy />
+      <Readings />
       <About />
       <Footer />
     </div>
