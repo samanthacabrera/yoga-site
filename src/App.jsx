@@ -4,6 +4,7 @@ import Channel from "./Channel";
 import Library from "./Library";
 import Philosophy from "./Philosphy";
 import Readings from "./Readings";
+import Spotify from "./Spotify";
 import About from "./About";
 import Footer from "./Footer";
 
@@ -16,6 +17,7 @@ function App() {
       <Library />
       <Philosophy />
       <Readings />
+      <Spotify />
       <About />
       <Footer />
     </div>
