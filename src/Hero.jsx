@@ -7,38 +7,27 @@ export default function Hero() {
     "READINGS",
     "SPOTIFY",
     "ABOUT",
-    "CONTACT",
+    "CONNECT",
   ];
 
   const SIZE = 700;
   const CENTER = SIZE / 2;
 
-  const spiralPoints = items.map((_, i) => {
-    const t = i * 0.9; 
-    const a = 8;
-    const b = 55;
+  const RADIUS = 240;
 
-    const radius = a + b * t;
+  const circlePoints = items.map((_, i) => {
+    const angle = (i / items.length) * Math.PI * 2 - Math.PI / 2;
 
     return {
-      x: CENTER + Math.cos(t) * radius,
-      y: CENTER + Math.sin(t) * radius,
+      x: CENTER + Math.cos(angle) * RADIUS,
+      y: CENTER + Math.sin(angle) * RADIUS,
     };
   });
 
-  const spiralPath = spiralPoints.reduce((acc, p, i) => {
-    if (i === 0) return `M ${p.x} ${p.y}`;
-
-    const prev = spiralPoints[i - 1];
-
-    const cx = (prev.x + p.x) / 2;
-    const cy = (prev.y + p.y) / 2;
-
-    return `${acc} Q ${prev.x} ${prev.y} ${cx} ${cy}`;
-  }, "");
-
   return (
-    <section className="relative -translate-y-1/4 min-h-screen overflow-hidden">
+    <section
+      id="hero"
+      className="min-h-screen overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute left-1/3 top-1/4 h-96 w-96 rounded-full bg-[#dccab6]/20 blur-3xl" />
         <div className="absolute right-1/3 bottom-1/4 h-[30rem] w-[30rem] rounded-full bg-[#efe7de]/40 blur-3xl" />
@@ -46,24 +35,22 @@ export default function Hero() {
 
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative h-[700px] w-[700px]">
-
-          <svg className="absolute inset-0 h-full w-full" viewBox={`0 0 ${SIZE} ${SIZE}`}>
-            <path
-              d={spiralPath}
-              fill="none"
-              stroke="rgba(41,21,3,.12)"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+          <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center">
+            <span className="mt-3 text-md tracking-[0.3em] text-[#291503]/60">
+              Sam Flows 
+            </span>
+            <span className="block mt-1 text-[12px] tracking-widest text-[#291503]/60">
+              ✩⋆｡° a yoga journal ⋆｡°✩
+            </span>
+          </div>
 
           {items.map((label, i) => (
             <a
               key={label}
               href={`#${label.toLowerCase()}`}
               style={{
-                left: spiralPoints[i].x,
-                top: spiralPoints[i].y,
+                left: circlePoints[i].x,
+                top: circlePoints[i].y,
                 transform: "translate(-50%, -50%)",
               }}
               className="absolute group"

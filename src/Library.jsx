@@ -5,32 +5,34 @@ import { useState } from "react";
 const videos = [
   {
     title: "Morning Flow",
-    duration: "18 min",
+    duration: "20 min",
     category: "Grounding",
     chakra: "Root Chakra",
-    color: "#FFBC40",
   },
   {
-    title: "Deep Stretch",
-    duration: "25 min",
+    title: "Evening Flow",
+    duration: "21 min",
     category: "Creativity",
     chakra: "Sacral Chakra",
-    color: "#c35d31",
   },
   {
-    title: "Slow Honey Flow",
-    duration: "15 min",
+    title: "Slow Flow",
+    duration: "20 min",
     category: "Inner Peace",
     chakra: "Crown Chakra",
-    color: "#355070",
   },
   {
     title: "Power Yoga",
-    duration: "30 min",
+    duration: "22 min",
     category: "Confidence",
     chakra: "Solar Plexus",
-    color: "#c35d31",
   },
+  {
+    title: "Midday Flow",
+    duration: "20 min",
+    category: "Communication",
+    chakra: "Throat Chakra",
+  }
 ];
 
 const filters = [
@@ -61,7 +63,7 @@ export default function Library() {
 
       <div className="relative flex flex-col gap-3 text-center">
         <h2 className="text-5xl font-light tracking-tight md:text-6xl">
-          Library
+          Flow Library
         </h2>
 
         <p className="mx-auto max-w-2xl text-lg text-[#291503]/65">
@@ -89,23 +91,14 @@ export default function Library() {
         })}
       </div>
 
-      <div className="relative grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <div className="relative grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
         {filteredVideos.map((video) => (
           <article
             key={video.title}
             className="group relative min-h-[320px] overflow-hidden rounded-[2.5rem] border border-[#291503]/15 bg-white/60 backdrop-blur-md shadow-sm transition-all duration-700 hover:-translate-y-1 hover:shadow-lg"
           >
-            <div
-              className="absolute -right-12 -top-12 h-40 w-40 rounded-full blur-3xl opacity-20"
-              style={{ backgroundColor: video.color }}
-            />
-
-            <div
-              className="absolute -left-16 bottom-0 h-32 w-32 rounded-full blur-3xl opacity-10"
-              style={{ backgroundColor: video.color }}
-            />
-
             <div className="relative flex h-full flex-col justify-between p-8">
+              
               <div className="space-y-5">
                 <div className="flex items-center gap-3">
                   <p className="text-[11px] uppercase tracking-[0.35em] text-[#291503]/50">
@@ -118,10 +111,7 @@ export default function Library() {
                 </h3>
 
                 <div className="flex items-center gap-3">
-                  <div
-                    className="h-px w-10"
-                    style={{ backgroundColor: `${video.color}80` }}
-                  />
+                  <div className="h-px w-10 bg-[#291503]/20" />
 
                   <span className="text-sm text-[#291503]/60">
                     {video.chakra}
@@ -140,6 +130,7 @@ export default function Library() {
                   ▶
                 </button>
               </div>
+
             </div>
           </article>
         ))}
