@@ -57,10 +57,8 @@ export default function Library() {
   return (
     <section
       id="library"
-      className="relative overflow-hidden scroll-mt-12 space-y-16 px-6 py-24 text-[#291503] md:px-12"
+      className="relative overflow-hidden px-6 py-12 space-y-16 text-[#291503] md:px-12"
     >
-      <div className="absolute inset-0 bg-[#f3f3ee]/70" />
-
       <div className="relative flex flex-col gap-3 text-center">
         <h2 className="text-5xl font-light tracking-tight md:text-6xl">
           Flow Library

@@ -2,10 +2,8 @@ export default function Footer() {
   return (
     <footer
       id="connect"
-      className="relative overflow-hidden px-6 py-28 md:px-16 text-[#291503]"
+      className="relative overflow-hidden px-6 py-12 md:px-16 text-[#291503]"
     >
-      <div className="absolute inset-0 bg-[#f3f3ee]/70" />
-
       <div className="relative mx-auto max-w-5xl space-y-24">
 
         <div className="max-w-2xl">

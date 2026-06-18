@@ -2,10 +2,8 @@ export default function Channel() {
   return (
     <section
       id="channel"
-      className="relative overflow-hidden scroll-mt-12 px-6 py-24 text-[#291503] md:px-12"
+      className="relative overflow-hidden px-6 py-12 text-[#291503] md:px-12"
     >
-      <div className="absolute inset-0 bg-[#f3f3ee]/70" />
-
       <div className="absolute left-1/2 top-24 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-[#FFBC40]/8 blur-3xl" />
 
       <div className="relative mx-auto max-w-5xl text-center">

@@ -1,7 +1,7 @@
 const currentReading = {
   month: "June 2026",
-  title: "The Heart of Yoga",
-  author: "T.K.V. Desikachar",
+  title: "The Heart of Yoga Teachings",
+  author: "Ram Dass",
 };
 
 const pastReadings = [
@@ -9,21 +9,18 @@ const pastReadings = [
 ];
 
 const futureReadings = [
-  { title: "Light on Yoga", author: "B.K.S. Iyengar" },
-  { title: "The Yoga Sutras of Patanjali", author: "Patanjali" },
-  { title: "The Bhagavad Gita", author: "Eknath Easwaran" },
-  { title: "The Yamas & Niyamas", author: "Deborah Adele" },
-  { title: "Meditations from the Mat", author: "Rolf Gates" },
+  { title: "Living Your Yoga: Finding the Spiritual in Everyday Life", author: "Judith Hanson Lasater PhD PT" },
+  { title: "Roots of Yoga", author: "James Mallinson, Mark Singelton" },
+  { title: "The Yoga Sutras of Patanjali", author: "Patanjali, Sri Swami Satchidananda" },
+  { title: "Yoga as Embodied Resistance...", author: "Anijali Rao, Thenmozhi Soundararajan" },
 ];
 
 export default function Readings() {
   return (
     <section
       id="readings"
-      className="relative overflow-hidden scroll-mt-12 px-6 py-24 text-[#291503] md:px-16 md:py-28"
+      className="relative overflow-hidden px-6 py-12 text-[#291503] md:px-16 md:py-28"
     >
-      <div className="absolute inset-0 bg-[#f3f3ee]/70" />
-
       <div className="relative mx-auto max-w-5xl">
         <p className="mb-10 text-[11px] uppercase tracking-[0.4em] text-[#291503]/50">
           Readings
