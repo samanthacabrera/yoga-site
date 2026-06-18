@@ -5,11 +5,7 @@ const currentReading = {
 };
 
 const pastReadings = [
-  {
-    month: "May 2026",
-    title: "The Wisdom of Yoga",
-    author: "Stephen Cope",
-  },
+  {}
 ];
 
 const futureReadings = [

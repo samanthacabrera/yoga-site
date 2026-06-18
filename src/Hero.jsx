@@ -28,11 +28,6 @@ export default function Hero() {
     <section
       id="hero"
       className="min-h-screen overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="absolute left-1/3 top-1/4 h-96 w-96 rounded-full bg-[#dccab6]/20 blur-3xl" />
-        <div className="absolute right-1/3 bottom-1/4 h-[30rem] w-[30rem] rounded-full bg-[#efe7de]/40 blur-3xl" />
-      </div>
-
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative h-[700px] w-[700px]">
           <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center">

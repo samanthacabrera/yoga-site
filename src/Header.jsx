@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 
 export default function Header() {
-  const [visible, setVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [visible, setVisible] = useState(false);
+  const [pastHero, setPastHero] = useState(false);
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
@@ -14,12 +16,32 @@ export default function Header() {
         setVisible(true);
       }
 
-      setLastScrollY(currentScrollY);
+      lastScrollY = currentScrollY;
     };
 
+    const hero = document.getElementById("hero");
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // true when hero has been scrolled past
+        setPastHero(!entry.isIntersecting);
+      },
+      {
+        threshold: 0.05,
+      }
+    );
+
+    if (hero) {
+      observer.observe(hero);
+    }
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header
@@ -28,14 +50,14 @@ export default function Header() {
         flex justify-center
         transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
         ${
-          visible
+          pastHero && visible
             ? "translate-y-0 opacity-100"
-            : "-translate-y-6 opacity-0"
+            : "-translate-y-6 opacity-0 pointer-events-none"
         }
       `}
     >
       <div className="mt-5">
-        <div className="rounded-full border border-[#291503]/10 bg-white/55 px-8 py-4 backdrop-blur-md">
+        <div className="rounded-full border border-[#291503]/10 bg-white/90 px-8 py-4 backdrop-blur-md">
           <div className="flex items-center gap-4">
             <div className="text-center">
               <p className="mb-1 text-[9px] uppercase tracking-[0.4em] text-[#291503]/40">
