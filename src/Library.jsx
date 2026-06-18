@@ -5,44 +5,39 @@ import { useState } from "react";
 const videos = [
   {
     title: "Morning Flow",
-    duration: "20 min",
-    category: "Grounding",
-    chakra: "Root Chakra",
-  },
-  {
-    title: "Evening Flow",
     duration: "21 min",
     category: "Creativity",
-    chakra: "Sacral Chakra",
-  },
-  {
-    title: "Slow Flow",
-    duration: "20 min",
-    category: "Inner Peace",
-    chakra: "Crown Chakra",
-  },
-  {
-    title: "Power Yoga",
-    duration: "22 min",
-    category: "Confidence",
-    chakra: "Solar Plexus",
+    chakra: "Solar Plexus Chakra",
   },
   {
     title: "Midday Flow",
     duration: "20 min",
-    category: "Communication",
+    category: "Authenticity",
     chakra: "Throat Chakra",
-  }
+  },
+  {
+    title: "Evening Flow",
+    duration: "20 min",
+    category: "Stability",
+    chakra: "Root Chakra",
+  },
 ];
 
 const filters = [
   "All",
-  "Grounding",
+  // Root Chakra
+  "Stability",
+  // Sacral Chakra
   "Creativity",
+  // Solar Plexus Chakra
   "Confidence",
-  "Self Love",
-  "Expression",
+  // Heart Chakra 
+  "Connection",
+  // Throat Charka 
+  "Authenticity",
+  // Third Eye Chakra
   "Clarity",
+  // Crown Chakra
   "Inner Peace",
 ];
 
@@ -89,7 +84,7 @@ export default function Library() {
         })}
       </div>
 
-      <div className="relative grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="relative grid grid-cols-1 gap-6 grid-cols-1 md:grid-cols-2">
         {filteredVideos.map((video) => (
           <article
             key={video.title}
