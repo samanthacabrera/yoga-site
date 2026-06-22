@@ -39,7 +39,7 @@ export default function Readings() {
 
         <div className="mt-14 space-y-12">
 
-          <div className="rounded-[3rem] border border-[#291503]/10 bg-white/60 backdrop-blur-md p-10 md:p-14">
+          <div className="rounded-[3rem] border border-[#291503]/10 bg-white backdrop-blur-md p-10 md:p-14">
                 <p className="text-[11px] uppercase tracking-[0.3em] text-[#291503]/40">
                 Reading now –   {currentReading.month}
                 </p>

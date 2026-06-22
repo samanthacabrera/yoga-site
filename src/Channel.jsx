@@ -16,7 +16,7 @@ export default function Channel() {
         </h2>
       </div>
 
-      <div className="relative mx-auto mt-14 max-w-5xl overflow-hidden rounded-[2.5rem] border border-[#291503]/10 bg-white/50 backdrop-blur-sm shadow-sm transition-shadow duration-700 hover:shadow-lg">
+      <div className="relative mx-auto mt-14 max-w-5xl overflow-hidden rounded-[2.5rem] border border-[#291503]/10 bg-white backdrop-blur-sm shadow-sm transition-shadow duration-700 hover:shadow-lg">
         <div className="grid md:grid-cols-[1.6fr_1fr]">
           <div className="group relative aspect-video overflow-hidden">
             <img

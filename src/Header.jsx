@@ -23,7 +23,6 @@ export default function Header() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // true when hero has been scrolled past
         setPastHero(!entry.isIntersecting);
       },
       {
@@ -57,10 +56,10 @@ export default function Header() {
       `}
     >
       <div className="mt-5">
-        <div className="rounded-full border border-[#291503]/10 bg-white/90 px-8 py-4 backdrop-blur-md">
+        <div className="rounded-full border border-[#291503]/10 bg-white px-8 py-4 backdrop-blur-md">
           <div className="flex items-center gap-4">
             <div className="text-center">
-              <p className="mb-1 text-[9px] uppercase tracking-[0.4em] text-[#291503]/40">
+              <p className="mb-1 text-[9px] uppercase tracking-[0.4em] text-[#291503]">
                 Yoga Journal by Sam Cabrera
               </p>
 

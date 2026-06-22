@@ -88,7 +88,7 @@ export default function Library() {
         {filteredVideos.map((video) => (
           <article
             key={video.title}
-            className="group relative min-h-[320px] overflow-hidden rounded-[2.5rem] border border-[#291503]/15 bg-white/60 backdrop-blur-md shadow-sm transition-all duration-700 hover:-translate-y-1 hover:shadow-lg"
+            className="group relative min-h-[320px] overflow-hidden rounded-[2.5rem] border border-[#291503]/15 bg-white backdrop-blur-md shadow-sm transition-all duration-700 hover:-translate-y-1 hover:shadow-lg"
           >
             <div className="relative flex h-full flex-col justify-between p-8">
               

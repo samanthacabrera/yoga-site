@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="relative mx-auto max-w-5xl space-y-24">
 
         <div className="max-w-2xl">
-          <div className="rounded-[2.5rem] border border-[#291503]/10 bg-white/40 backdrop-blur-sm p-8 md:p-12 space-y-6">
+          <div className="rounded-[2.5rem] border border-[#291503]/10 bg-white backdrop-blur-sm p-8 md:p-12 space-y-6">
 
             <p className="text-[11px] uppercase tracking-[0.4em] text-[#291503]/50">
               Newsletter

@@ -42,7 +42,7 @@ export default function Spotify() {
               href={list.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-[2.5rem] border border-[#291503]/10 bg-white/50 backdrop-blur-sm px-8 py-8 md:px-10 md:py-10 transition hover:bg-white/70"
+              className="group block rounded-[2.5rem] border border-[#291503]/10 bg-white backdrop-blur-sm px-8 py-8 md:px-10 md:py-10 transition hover:bg-white/70"
             >
               <div className="flex items-start justify-between gap-10">
                 <div>

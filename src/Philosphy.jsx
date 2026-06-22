@@ -13,7 +13,7 @@ export default function Philosophy() {
           Move & Explore
         </h2>
 
-        <div className="my-14 rounded-[2.5rem] border border-[#291503]/10 bg-white/50 backdrop-blur-sm px-8 py-10 md:px-12 md:py-14">
+        <div className="my-14 rounded-[2.5rem] border border-[#291503]/10 bg-white backdrop-blur-sm px-8 py-10 md:px-12 md:py-14">
           <div className="space-y-6 text-base leading-[1.9] text-[#291503]/70">
             <p>
               <span className="italic">Sam Flows</span> is my yoga diary: a place to document flows, routines, lessons, and experiences as they unfold. Some days bring progress. Other days bring perspective. Both are worth sharing.
