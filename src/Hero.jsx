@@ -31,10 +31,10 @@ export default function Hero() {
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative h-[700px] w-[700px]">
           <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center">
-            <span className="mt-3 text-md tracking-[0.3em] text-[#291503]/60">
+            <span className="mt-3 text-md tracking-[0.3em]">
               Sam Flows 
             </span>
-            <span className="block mt-1 text-[12px] tracking-widest text-[#291503]/60">
+            <span className="block mt-1 text-[12px] tracking-widest">
               ✩⋆｡° a yoga journal ⋆｡°✩
             </span>
           </div>

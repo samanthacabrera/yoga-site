@@ -9,10 +9,7 @@ html {
   margin: 0;
   scroll-behavior: smooth;
   font-family: "Elms Sans", Helvetica, sans-serif;
-  color: #291503;
-  background-color: #fffff9;
-  background-image:
-    linear-gradient(to right, rgba(41, 21, 3, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(41, 21, 3, 0.03) 1px, transparent 1px);
+  color: #4e3000;
+  background-color: #ffefd5;
   background-size: 48px 48px;
 }
