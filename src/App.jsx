@@ -13,8 +13,8 @@ function App() {
     <div className="flex flex-col max-w-4xl mx-4 lg:mx-auto space-y-40">
       <Header />
       <Hero />
-      <Channel />
-      <Library />
+      {/* <Channel /> */}
+      {/* <Library /> */}
       <Philosophy />
       <Readings />
       <Spotify />

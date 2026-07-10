@@ -1,15 +1,14 @@
 const currentReading = {
-  month: "June 2026",
-  title: "The Heart of Yoga Teachings",
-  author: "Ram Dass",
+  month: "July 2026",
+  title: "Living Your Yoga: Finding the Spiritual in Everyday Life",
+  author: "Judith Hanson Lasater PhD PT",
 };
 
 const pastReadings = [
-  {}
+  { title: "The Heart of Yoga Teachings", author: "Ram Dass" }
 ];
 
 const futureReadings = [
-  { title: "Living Your Yoga: Finding the Spiritual in Everyday Life", author: "Judith Hanson Lasater PhD PT" },
   { title: "Roots of Yoga", author: "James Mallinson, Mark Singelton" },
   { title: "The Yoga Sutras of Patanjali", author: "Patanjali, Sri Swami Satchidananda" },
   { title: "Yoga as Embodied Resistance...", author: "Anijali Rao, Thenmozhi Soundararajan" },
@@ -30,10 +29,6 @@ export default function Readings() {
           Dive Deeper 
         </h2>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#291503]/65">
-            I focus on one book each month and try to read most days, allowing the ideas
-            to settle alongside practice.
-            <br />
-            <br />
             I invite you to read along with this month’s book, or explore any of the other titles listed here.
         </p>
 
@@ -53,7 +48,7 @@ export default function Readings() {
               </p>
           </div>
 
-          <div className="grid gap-2 md:grid-cols-2 md:items-start">
+          <div className="grid gap-2 md:grid-cols-2 md:items-start pt-8">
 
             <div>
               <p className="text-[11px] uppercase tracking-[0.4em] text-[#291503]/45">

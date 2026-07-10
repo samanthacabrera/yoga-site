@@ -1,6 +1,6 @@
 export default function Hero() {
   const items = [
-    "CHANNEL",
+    // "CHANNEL",
     "PHILOSOPHY",
     "READINGS",
     "SPOTIFY",

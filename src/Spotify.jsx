@@ -1,29 +1,19 @@
 export default function Spotify() {
   const playlists = [
     {
-      title: "Core Power Flow",
-      description: "Driving rhythms and steady intensity for strong, dynamic movement.",
-      url: "https://open.spotify.com/",
-    },
-    {
-      title: "Bright Morning Flow",
-      description: "Light, uplifting tracks that feel open and energizing.",
-      url: "https://open.spotify.com/",
-      },
-    {
       title: "Gentle Evening Flow",
-      description: "Soft, slower beats for easing into stillness.",
-      url: "https://open.spotify.com/",
-      },
+      description: "Calm, slow beats for easing into stillness",
+      url: "https://open.spotify.com/playlist/5rNqSI6tczOZZRLguVydSQ?si=y8TSsQtCS_mNKpEGY4AEPw&utm_source=copy-link",
+    },
   ];
 
   return (
     <section
       id="spotify"
-      className="relative overflow-hidden px-6 py-12 text-[#291503] md:px-16 md:py-28"
+      className="px-6 py-24 text-[#291503] md:px-16 md:py-36"
     >
-      <div className="relative mx-auto max-w-5xl">
-        <p className="mb-10 text-[11px] uppercase tracking-[0.4em] text-[#291503]/50">
+      <div className="mx-auto max-w-5xl">
+        <p className="mb-8 text-[11px] uppercase tracking-[0.4em] text-[#291503]/40">
           Sound Meditation
         </p>
 
@@ -31,34 +21,34 @@ export default function Spotify() {
           Spotify Playlists
         </h2>
 
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[#291503]/65">
-          Discover songs I return to time and time again during my personal practice. 
-        </p>
-
-        <div className="mt-14 space-y-6">
-          {playlists.map((list) => (
+        <div className="mt-16 border-t border-[#291503]/10">
+          {playlists.map((list, index) => (
             <a
               key={list.title}
               href={list.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-[2.5rem] border border-[#291503]/10 bg-white backdrop-blur-sm px-8 py-8 md:px-10 md:py-10 transition hover:bg-white/70"
+              className="group flex items-start justify-between gap-8 border-b border-[#291503]/10 py-8 transition"
             >
-              <div className="flex items-start justify-between gap-10">
+              <div className="flex gap-6">
+                <span className="mt-1 w-8 text-sm text-[#291503]/35">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
                 <div>
-                  <h3 className="text-2xl font-light tracking-tight text-[#291503]">
+                  <h3 className="text-2xl font-light transition group-hover:translate-x-1">
                     {list.title}
                   </h3>
 
-                  <p className="mt-2 text-sm leading-relaxed text-[#291503]/60 max-w-md">
+                  <p className="mt-2 max-w-lg text-sm leading-relaxed text-[#291503]/60">
                     {list.description}
                   </p>
                 </div>
-
-                <span className="text-sm text-[#291503]/30 group-hover:text-[#291503]/60 transition">
-                  ↗
-                </span>
               </div>
+
+              <span className="text-xl text-[#291503]/30 transition group-hover:translate-x-1 group-hover:text-[#291503]/70">
+                ↗
+              </span>
             </a>
           ))}
         </div>
