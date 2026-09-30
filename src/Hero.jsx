@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-function Hero({ channel, philosophy, spotify, connect }) {
+function Hero({ channel, philosophy, connect, spotify }) {
   const items = [
-    "CHANNEL", 
+    "CHANNEL",
     "PHILOSOPHY",
     "CONNECT",
     "SPOTIFY",
@@ -43,8 +43,22 @@ function Hero({ channel, philosophy, spotify, connect }) {
   const content = {
     CHANNEL: channel,
     PHILOSOPHY: philosophy,
-    SPOTIFY: spotify,
     CONNECT: connect,
+    SPOTIFY: spotify,
+  };
+
+  const heroTransforms = {
+    CHANNEL:
+      "translateX(30vw) translateY(0) scale(0.62)",
+
+    PHILOSOPHY:
+      "translateX(0) translateY(25vh) scale(0.62)",
+
+    CONNECT:
+      "translateX(0) translateY(-25vh) scale(0.62)",
+
+    SPOTIFY:
+      "translateX(-30vw) translateY(0) scale(0.62)",
   };
 
   return (
@@ -58,65 +72,44 @@ function Hero({ channel, philosophy, spotify, connect }) {
         )}
       </div>
 
+
       <div
-        className={`absolute inset-0 z-20 transition-opacity duration-300 ${
-          active ? "pointer-events-none" : ""
-        }`}
+        className="absolute inset-0 z-20 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.76,0,0.24,1)]"
+        style={{
+          transform: active
+            ? heroTransforms[active]
+            : "translateX(0) translateY(0) scale(1)",
+        }}
       >
-        
+
+        <div className="absolute inset-0 bg-[#f5f0e8]" />
+
         <Nav
           items={items}
           circlePoints={circlePoints}
           onClick={setActive}
         />
 
-        {/* Top */}
-        <div
-          className={`absolute inset-x-0 top-0 h-1/2 bg-[#f5f0e8] transition-transform duration-1000 ease-[cubic-bezier(0.76,0,0.24,1)] ${
-            active ? "-translate-y-full" : "translate-y-0"
-          }`}
-        />
-
-        {/* Bottom */}
-        <div
-          className={`absolute inset-x-0 bottom-0 h-1/2 bg-[#f5f0e8] transition-transform duration-1000 ease-[cubic-bezier(0.76,0,0.24,1)] ${
-            active ? "translate-y-full" : "translate-y-0"
-          }`}
-        />
-
-        {/* Center text  */}
-        <div
-          className={`pointer-events-none absolute inset-0 z-30 flex items-center justify-center transition-opacity duration-500 ${
-            active ? "opacity-0" : "opacity-100"
-          }`}
-        >
-          <div className="flex flex-col items-center">
-            <span className="text-md tracking-[0.3em]">
-              Sam Flows
-            </span>
-
-            <span className="mt-1 text-[12px] tracking-widest">
-              ✩⋆｡° a yoga journal ⋆｡°✩
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* Close */}
-      {active && (
+      <div className="absolute inset-0 z-40 flex items-center justify-center pointer-events-none">
         <button
           type="button"
           onClick={() => setActive(null)}
-          className="absolute right-6 top-6 z-50 text-xs tracking-[0.3em] text-[#291503]/50 transition-colors hover:text-[#291503]"
+          className="pointer-events-auto flex flex-col items-center"
         >
-          CLOSE ×
+          <span className="text-md tracking-[0.3em] transition-opacity duration-300 hover:opacity-60">
+            Sam Flows
+          </span>
+
+          <span className="mt-1 text-[12px] tracking-widest transition-opacity duration-300 hover:opacity-60">
+            ✩⋆｡° a yoga journal ⋆｡°✩
+          </span>
         </button>
-      )}
+      </div>
+
+      </div>
     </main>
   );
 }
-
-// NAV 
 
 function Nav({
   items,
@@ -142,6 +135,7 @@ function Nav({
             className="group absolute"
           >
             <div className="flex flex-col items-center gap-2">
+
               <div className="h-2.5 w-2.5 rounded-full bg-[#291503]/25 transition-all duration-500 group-hover:scale-150 group-hover:bg-[#291503]" />
 
               <span className="whitespace-nowrap text-[11px] tracking-[0.45em] text-[#291503]/70 transition-colors duration-300 group-hover:text-[#291503] md:text-sm">
@@ -152,6 +146,7 @@ function Nav({
           </button>
         );
       })}
+
     </div>
   );
 }
