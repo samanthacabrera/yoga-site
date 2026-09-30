@@ -2,7 +2,7 @@ import Hero from "./Hero";
 import Channel from "./Channel";
 import Philosophy from "./Philosphy";
 import Spotify from "./Spotify";
-import Footer from "./Footer";
+import Newsletter from "./Newsletter";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         channel={<Channel />}
         philosophy={<Philosophy />}
         spotify={<Spotify />}
-        connect={<Footer />}
+        connect={<Newsletter />}
       />
     </div>
   );

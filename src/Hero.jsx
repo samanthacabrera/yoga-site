@@ -6,15 +6,15 @@ function Hero({ channel, philosophy, connect, spotify }) {
   const content = {
     CHANNEL: channel,
     PHILOSOPHY: philosophy,
-    CONNECT: connect,
     SPOTIFY: spotify,
+    CONNECT: connect,
   };
 
   const items = [
     "CHANNEL",
     "PHILOSOPHY",
-    "CONNECT",
     "SPOTIFY",
+    "CONNECT",
   ];
 
   return (
@@ -31,7 +31,7 @@ function Hero({ channel, philosophy, connect, spotify }) {
             Sam Flows
           </span>
 
-          <span className="mt-1 text-[11px] tracking-widest">
+          <span className="mt-1 tracking-widest">
             ✩⋆｡° a yoga journal ⋆｡°✩
           </span>
         </button>

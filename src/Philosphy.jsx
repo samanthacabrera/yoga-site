@@ -1,24 +1,29 @@
 export default function Philosophy() {
   return (
-    <section
-      id="philosophy"
-      className="relative overflow-hidden px-6 py-12 text-[#291503] md:px-16 md:py-28"
-    >
-      <div className="relative mx-auto max-w-5xl">
-        <p className="mb-10 text-xl uppercase tracking-[0.4em] text-[#291503]/50">
-          Philosophy
-        </p>
+    <section className="flex h-full w-full items-center overflow-hidden px-8 py-10 text-[#291503] md:px-12 lg:px-16">
+      <div className="flex w-full max-w-xl flex-col justify-center">
 
-        <div className="my-14 rounded-[2.5rem] border border-[#291503]/10 bg-white backdrop-blur-sm px-8 py-10 md:px-12 md:py-14">
-          <div className="space-y-6 text-base leading-[1.9] text-[#291503]/70">
+        <h2 className="font-light tracking-tight md:text-xl">
+          Philosophy
+        </h2>
+
+        <div className="mt-8 border-t border-[#291503]/10 pt-8">
+          <div className="space-y-6 text-sm leading-7 text-[#291503]/65 md:text-base">
             <p>
-              <span className="italic">Sam Flows</span> is my yoga diary: a place to document yoga flows, lessons, and experiences as they unfold. Some days bring progress. Other days bring perspective. Both are worth sharing.
+              <span className="italic text-[#291503]">Sam Flows</span> is my
+              yoga diary — a place to document yoga flows, lessons, and
+              experiences as they unfold. Some days bring progress. Other days
+              bring perspective. Both are worth sharing.
             </p>
+
             <p>
-              Through yoga, I've found new ways to build strength, improve mobility, and reconnect with my body. By sharing what I learn along the way, I hope to inspire others to explore movement and experience the same sense of well-being that keeps drawing me back to the mat.
+              By sharing what I learn from my personal practice, I hope to inspire others to explore movement and
+              experience the same sense of well-being and peace that keeps drawing me
+              back to the mat.
             </p>
           </div>
         </div>
+
       </div>
     </section>
   );
