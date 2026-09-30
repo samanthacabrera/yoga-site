@@ -1,34 +1,42 @@
-export default function Spotify() {
+function Spotify() {
   const playlists = [
     {
-      title: "Gentle Evening Flow",
-      description: "Calm, slow beats for easing into stillness",
-      url: "https://open.spotify.com/playlist/5rNqSI6tczOZZRLguVydSQ?si=y8TSsQtCS_mNKpEGY4AEPw&utm_source=copy-link",
+      title: "Gentle Flow",
+      description: "Calm beats for easing into stillness.",
+      url: "https://open.spotify.com/playlist/5rNqSI6tczOZZRLguVydSQ",
+    },
+    {
+      title: "Hypno Flow",
+      description: "Funky and rhythmic sound meditation.",
+      url: "https://open.spotify.com/playlist/5rNqSI6tczOZZRLguVydSQ",
+    },
+    {
+      title: "Energy Flow",
+      description: "Happy songs to lift your mood.",
+      url: "https://open.spotify.com/playlist/5rNqSI6tczOZZRLguVydSQ",
+    },
+    {
+      title: "Power Flow",
+      description: "Hard bass to cultivate inner fire.",
+      url: "https://open.spotify.com/playlist/5rNqSI6tczOZZRLguVydSQ",
     },
   ];
 
   return (
-    <section
-      id="spotify"
-      className="px-6 py-24 text-[#291503] md:px-16 md:py-36"
-    >
-      <div className="mx-auto max-w-5xl">
-        <p className="mb-8 text-[11px] uppercase tracking-[0.4em] text-[#291503]/40">
-          Sound Meditation
-        </p>
-
+    <section className="h-full overflow-hidden px-6 py-16 text-[#291503] md:px-16">
+      <div className="mx-auto flex h-full max-w-5xl flex-col justify-center">
         <h2 className="text-5xl font-light tracking-tight md:text-6xl">
           Spotify Playlists
         </h2>
 
-        <div className="mt-16 border-t border-[#291503]/10">
+        <div className="mt-12 border-t border-[#291503]/10">
           {playlists.map((list, index) => (
             <a
               key={list.title}
               href={list.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-start justify-between gap-8 border-b border-[#291503]/10 py-8 transition"
+              className="group flex items-start justify-between gap-8 border-b border-[#291503]/10 py-6"
             >
               <div className="flex gap-6">
                 <span className="mt-1 w-8 text-sm text-[#291503]/35">
@@ -36,7 +44,7 @@ export default function Spotify() {
                 </span>
 
                 <div>
-                  <h3 className="text-2xl font-light transition group-hover:translate-x-1">
+                  <h3 className="text-2xl font-light transition-transform duration-300 group-hover:translate-x-1">
                     {list.title}
                   </h3>
 
@@ -46,7 +54,7 @@ export default function Spotify() {
                 </div>
               </div>
 
-              <span className="text-xl text-[#291503]/30 transition group-hover:translate-x-1 group-hover:text-[#291503]/70">
+              <span className="text-xl text-[#291503]/30 transition-all group-hover:translate-x-1 group-hover:text-[#291503]/70">
                 ↗
               </span>
             </a>
@@ -56,3 +64,5 @@ export default function Spotify() {
     </section>
   );
 }
+
+export default Spotify;

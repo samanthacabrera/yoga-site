@@ -1,24 +1,19 @@
-export default function Footer() {
+export default function Connect() {
   return (
-    <footer
+    <div
       id="connect"
       className="relative overflow-hidden px-6 py-12 md:px-16 text-[#291503]"
     >
-      <div className="relative mx-auto max-w-5xl space-y-24">
 
-        {/* <div className="max-w-2xl">
+        <div className="max-w-2xl">
           <div className="rounded-[2.5rem] border border-[#291503]/10 bg-white backdrop-blur-sm p-8 md:p-12 space-y-6">
 
             <p className="text-[11px] uppercase tracking-[0.4em] text-[#291503]/50">
               Newsletter
-            </p>
-
-            <h2 className="text-4xl md:text-5xl font-light tracking-tight">
-              A monthly reflection
-            </h2>
-
+          </p>
+          
             <p className="text-[#291503]/65 leading-[1.9]">
-              I share what I’m exploring through yoga, reading, and daily life, as well as monthly challenges and retreat updates.
+              A monthly reflection where I share what I’m exploring through yoga, reading, and daily life, as well retreat updates.
             </p>
 
             <form className="flex items-center gap-3 pt-4">
@@ -37,50 +32,8 @@ export default function Footer() {
             </form>
 
           </div>
-        </div> */}
-
-        <div className="border-t border-[#291503]/10" />
-
-        <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-10">
-
-          <div className="text-sm text-[#291503]/60">
-            Sam Flows © 2026
-          </div>
-
-          <div className="flex gap-3 text-sm text-[#291503]/60">
-            <a
-              href="mailto:samantha.n.cabrera@gmail.com"
-              className="hover:text-[#291503] transition"
-            >
-              contact
-            </a>
-
-            <span className="text-[#291503]/20">/</span>
-
-            <a
-              href="https://buymeacoffee.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#291503] transition"
-            >
-              support
-            </a>
-
-            <span className="text-[#291503]/20">/</span>
-
-            <a
-              href="https://www.youtube.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#291503] transition"
-            >
-              youtube
-            </a>
-          </div>
-
         </div>
 
-      </div>
-    </footer>
+    </div>
   );
 }
