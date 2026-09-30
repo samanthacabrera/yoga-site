@@ -23,8 +23,8 @@ function Spotify() {
   ];
 
   return (
-    <section className="h-full overflow-hidden px-6 py-16 text-[#291503] md:px-16">
-      <div className="mx-auto flex h-full max-w-5xl flex-col justify-center">
+    <section className="flex h-full w-full items-center justify-end overflow-hidden px-6 py-16 text-[#291503] md:px-16">
+      <div className="flex h-full w-[75%] flex-col justify-center">
         <h2 className="text-5xl font-light tracking-tight md:text-6xl">
           Spotify Playlists
         </h2>

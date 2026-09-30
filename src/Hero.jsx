@@ -1,44 +1,7 @@
 import { useState } from "react";
 
 function Hero({ channel, philosophy, connect, spotify }) {
-  const items = [
-    "CHANNEL",
-    "PHILOSOPHY",
-    "CONNECT",
-    "SPOTIFY",
-  ];
-
-  const SIZE = 700;
-  const CENTER = SIZE / 2;
-  const RADIUS = 240;
-
   const [active, setActive] = useState(null);
-
-  const positions = [
-    {
-      x: CENTER,
-      y: CENTER - RADIUS,
-    },
-    {
-      x: CENTER + RADIUS,
-      y: CENTER,
-    },
-    {
-      x: CENTER,
-      y: CENTER + RADIUS,
-    },
-    {
-      x: CENTER - RADIUS,
-      y: CENTER,
-    },
-  ];
-
-  const circlePoints = {
-    PHILOSOPHY: positions[0],
-    SPOTIFY: positions[1],
-    CONNECT: positions[2],
-    CHANNEL: positions[3],
-  };
 
   const content = {
     CHANNEL: channel,
@@ -47,107 +10,89 @@ function Hero({ channel, philosophy, connect, spotify }) {
     SPOTIFY: spotify,
   };
 
-  const heroTransforms = {
-    CHANNEL:
-      "translateX(30vw) translateY(0) scale(0.62)",
-
-    PHILOSOPHY:
-      "translateX(0) translateY(25vh) scale(0.62)",
-
-    CONNECT:
-      "translateX(0) translateY(-25vh) scale(0.62)",
-
-    SPOTIFY:
-      "translateX(-30vw) translateY(0) scale(0.62)",
-  };
+  const items = [
+    "CHANNEL",
+    "PHILOSOPHY",
+    "CONNECT",
+    "SPOTIFY",
+  ];
 
   return (
-    <main className="relative h-screen w-full overflow-hidden bg-[#f5f0e8] text-[#291503]">
+    <main className="flex h-screen w-full overflow-hidden bg-[#f5f0e8] text-[#291503]">
 
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        {active && (
-          <div className="h-full w-full">
-            {content[active]}
-          </div>
-        )}
-      </div>
+      <section className="flex h-full w-1/2 flex-col justify-center px-12 md:px-20 lg:px-28">
 
-
-      <div
-        className="absolute inset-0 z-20 origin-center transition-transform duration-1000 ease-[cubic-bezier(0.76,0,0.24,1)]"
-        style={{
-          transform: active
-            ? heroTransforms[active]
-            : "translateX(0) translateY(0) scale(1)",
-        }}
-      >
-
-        <div className="absolute inset-0 bg-[#f5f0e8]" />
-
-        <Nav
-          items={items}
-          circlePoints={circlePoints}
-          onClick={setActive}
-        />
-
-      <div className="absolute inset-0 z-40 flex items-center justify-center pointer-events-none">
         <button
           type="button"
           onClick={() => setActive(null)}
-          className="pointer-events-auto flex flex-col items-center"
+          className="mb-16 flex w-fit flex-col items-start"
         >
-          <span className="text-md tracking-[0.3em] transition-opacity duration-300 hover:opacity-60">
+          <span className="text-md tracking-[0.3em] transition-opacity hover:opacity-60">
             Sam Flows
           </span>
 
-          <span className="mt-1 text-[12px] tracking-widest transition-opacity duration-300 hover:opacity-60">
+          <span className="mt-1 text-[11px] tracking-widest">
             ✩⋆｡° a yoga journal ⋆｡°✩
           </span>
         </button>
-      </div>
 
-      </div>
-    </main>
-  );
-}
+        <nav className="flex flex-col items-start">
+          {items.map((item) => (
+            <button
+              key={item}
+              type="button"
+              onClick={() => setActive(item)}
+              className="group flex items-center gap-4 py-2"
+            >
+              <span
+                className={`
+                  h-2
+                  w-2
+                  rounded-full
+                  transition-all
+                  duration-300
+                  ${
+                    active === item
+                      ? "bg-[#291503]"
+                      : "bg-[#291503]/25 group-hover:bg-[#291503]"
+                  }
+                `}
+              />
 
-function Nav({
-  items,
-  circlePoints,
-  onClick,
-}) {
-  return (
-    <div className="absolute left-1/2 top-1/2 z-10 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2">
-
-      {items.map((label) => {
-        const point = circlePoints[label];
-
-        return (
-          <button
-            key={label}
-            type="button"
-            onClick={() => onClick(label)}
-            style={{
-              left: point.x,
-              top: point.y,
-              transform: "translate(-50%, -50%)",
-            }}
-            className="group absolute"
-          >
-            <div className="flex flex-col items-center gap-2">
-
-              <div className="h-2.5 w-2.5 rounded-full bg-[#291503]/25 transition-all duration-500 group-hover:scale-150 group-hover:bg-[#291503]" />
-
-              <span className="whitespace-nowrap text-[11px] tracking-[0.45em] text-[#291503]/70 transition-colors duration-300 group-hover:text-[#291503] md:text-sm">
-                {label}
+              <span
+                className={`
+                  text-sm
+                  tracking-[0.35em]
+                  transition-all
+                  duration-300
+                  ${
+                    active === item
+                      ? "text-[#291503]"
+                      : "text-[#291503]/60 group-hover:text-[#291503]"
+                  }
+                `}
+              >
+                {item}
               </span>
+            </button>
+          ))}
+        </nav>
 
-            </div>
-          </button>
-        );
-      })}
+      </section>
 
-    </div>
+      <section className="h-full w-1/2 overflow-hidden border-l border-[#291503]/10">
+        {active ? (
+          <div className="h-full w-full">
+            {content[active]}
+          </div>
+        ) : (
+          <div className="flex h-full items-center justify-center px-12">
+            {/* video goes here later */}
+          </div>
+        )}
+      </section>
+
+    </main>
   );
 }
 
