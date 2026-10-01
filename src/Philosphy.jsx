@@ -11,15 +11,13 @@ export default function Philosophy() {
           <div className="space-y-6 text-sm leading-7 text-[#291503]/65 md:text-base">
             <p>
               <span className="italic text-[#291503]">Sam Flows</span> is my
-              yoga diary — a place to document yoga flows, lessons, and
-              experiences as they unfold. Some days bring progress. Other days
-              bring perspective. Both are worth sharing.
+              yoga journal. Which means my objective is to share bits of my personal, unconventional yoga practice. 
+              There is no "correct" way to practice yoga so take what feels good, modify what doesn’t, and make the practice your own.
             </p>
 
             <p>
-              By sharing what I learn from my personal practice, I hope to inspire others to explore movement and
-              experience the same sense of well-being and peace that keeps drawing me
-              back to the mat.
+              My signature flow style is dancey vinyasa yoga mixed with strength training.  
+              I like to finish with a fiery ab circuit to leave it all on the mat before surrending to savasana. 
             </p>
           </div>
         </div>
@@ -28,3 +26,5 @@ export default function Philosophy() {
     </section>
   );
 }
+
+
