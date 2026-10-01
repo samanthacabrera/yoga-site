@@ -6,7 +6,7 @@ import Newsletter from "./Newsletter";
 
 function App() {
   return (
-    <div className="h-screen overflow-hidden">
+    <div className="h-screen md:overflow-hidden">
       <Hero
         channel={<Channel />}
         philosophy={<Philosophy />}

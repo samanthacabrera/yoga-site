@@ -14,7 +14,7 @@ export default function Channel() {
           <div className="space-y-6 text-sm leading-7 text-[#291503]/65 md:text-base">
 
             <p>
-              A new 20-minute vinyasa yoga and Pilates flow every Monday, designed to
+              A new 20-minute Vinyasa Yoga/Pilates flow every Monday, designed to
               support strength, mobility, and mindful movement.
             </p>
 
